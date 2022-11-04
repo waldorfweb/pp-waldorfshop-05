@@ -99,30 +99,30 @@ $(window).on("load", function() {
     // Popupstore Hack
 
 
-    $('.popupstore a').attr('href', '#');
+    //$('.popupstore a').attr('href', '#');
     //$('.popupstore .thumb-content a').attr('href','#');
     //$('.popupstore .invisible a').attr('href','#');
-    $('.popupstore .cmp-product-thumb').css('overflow', 'visible');
+    //$('.popupstore .cmp-product-thumb').css('overflow', 'visible');
     //$('.popupstore .invisible li').css('overflow','visible');
     //$('.popupstore .d-lg-block i').replaceWith('<i class="fa fa-lg mobile-icon-right fas fa-star " style="color:#b92a38; position: absolute; right: -16px; font-size: 48px; top: -4px; z-index:10"></i>');
     //$('.popupstore li i').replaceWith('<i class="fa fa-lg mobile-icon-right fas fa-star " style="color:#b92a38; position: absolute; right: -16px;  font-size: 36px; top: -4px; z-index:10"></i>');
     //$('.popupstore .d-lg-block i').unwrap();
 
-    $('.popupstore li ').prepend('<i class="fa fa-lg mobile-icon-right fas fa-star " style="color:#b92a38; position: absolute; right: 0px;  font-size: 36px; top: -4px; z-index:10"></i>');
+    //$('.popupstore li ').prepend('<i class="fa fa-lg mobile-icon-right fas fa-star " style="color:#b92a38; position: absolute; right: 0px;  font-size: 36px; top: -4px; z-index:10"></i>');
 
 
 
     // Popupstore Hack end
     //remove canonical tag
     //$(".cano").removeClass("cano");
-    $(".search-input ").attr("placeholder", "Suche");
-    if ($("html[lang='nl']").length) {
-        $(".search-input ").attr("placeholder", "Zoeken");
-    } else if ($("html[lang='en']").length) {
-        $(".search-input ").attr("placeholder", "Search");
-    } else {
-        $(".search-input ").attr("placeholder", "Suche");
-    }
+    // $(".search-input ").attr("placeholder", "Suche");
+    // if ($("html[lang='nl']").length) {
+    //     $(".search-input ").attr("placeholder", "Zoeken");
+    // } else if ($("html[lang='en']").length) {
+    //     $(".search-input ").attr("placeholder", "Search");
+    // } else {
+    //     $(".search-input ").attr("placeholder", "Suche");
+    // }
 
     if ($("body").hasClass("item-10000621")) {
         //alert('test3');
@@ -358,7 +358,7 @@ $(window).on("load", function() {
 
 
     //Login Passwort Hinweis
-    $(".login-pwd-reset, .modal-footer").append("<div class='passworthinweis'><div>Noch kein Kundenkonto?</div><a href='/registrieren' class='btn btn-outline-primary'><i aria-hidden='true' class='fa fa-user-plus ml-1'></i>Registrieren Sie sich</div>");
+    $("#login-modal-wrapper .login-pwd-reset").append("<div class='passworthinweis'><div>Noch kein Kundenkonto?</div><a href='/registrieren' class='btn btn-outline-primary'><i aria-hidden='true' class='fa fa-user-plus ml-1'></i>Registrieren Sie sich</div>");
 
     $("#login .login-pwd-reset form").append("<div class='passworthinweis gastbestellung'>Hier können Sie als Gast bestellen ohne sich registrieren oder anmelden zu müssen. <br /><button href=\"/anmelden\" class=\"btn btn-primary btn-appearance btn-medium\">Weiter mit Gastbestellung. <i class=\"fa fa-user-secret\"></i></button></div>");
 

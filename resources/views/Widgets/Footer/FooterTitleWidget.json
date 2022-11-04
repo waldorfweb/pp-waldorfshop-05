@@ -1,11 +1,11 @@
 {
-    "identifier": "Waldorfshop4::FooterTitleWidget",
+    "identifier": "Waldorfshop5::FooterTitleWidget",
     "label": "Widget.footerHeadline",
     "previewImageURL": "/images/dia-widgets/footer-headline.png",
     "type": "static",
     "categories": ["dia"],
     "position": 400,
-    "widgetClass": "Waldorfshop4\\Widgets\\Footer\\FooterTitleWidget",
+    "widgetClass": "Waldorfshop5\\Widgets\\Footer\\FooterTitleWidget",
     "settings": {
         "text": {
             "type": "text",

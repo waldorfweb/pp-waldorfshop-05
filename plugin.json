@@ -1,10 +1,10 @@
 {
     "version": "5.0.51",
     "license": "AGPL-3.0",
-    "name": "Waldorfshop4",
+    "name": "Waldorfshop5",
     "marketplaceName": {
-        "de": "Waldorfshop4",
-        "en": "Waldorfshop4"
+        "de": "Waldorfshop5",
+        "en": "Waldorfshop5"
     },
     "pluginIcon": "icon_plugin_xs.png",
     "authorIcon": "icon_author_xs.png",
@@ -15,7 +15,7 @@
         "de": "Waldorf theme 02 für Ceres.",
         "en": "Waldorf theme 02 for Ceres."
     },
-    "namespace": "Waldorfshop4",
+    "namespace": "Waldorfshop5",
     "author": "Universnatur GmbH",
     "keywords": [
         "plentymarkets",
@@ -37,5 +37,5 @@
         "name": "Head: Google Tag Manager",
         "description": "Add data layer before google tag manager"
     }],
-    "serviceProvider": "Waldorfshop4\\Providers\\ThemeServiceProvider"
+    "serviceProvider": "Waldorfshop5\\Providers\\ThemeServiceProvider"
 }

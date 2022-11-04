@@ -1,11 +1,11 @@
 {
-    "identifier": "Waldorfshop4::HeaderWidget",
+    "identifier": "Waldorfshop5::HeaderWidget",
     "label": "Widget.Header",
     "previewImageURL": "/images/dia-widgets/header-navbar.png",
     "type": "header",
     "categories": ["dia"],
     "position": 0,
-    "widgetClass": "Waldorfshop4\\Widgets\\Header\\HeaderWidget",
+    "widgetClass": "Waldorfshop5\\Widgets\\Header\\HeaderWidget",
     "settings": {
         "enableLanguageSelect": {
             "type": "checkbox",
@@ -88,8 +88,7 @@
             "options": {
                 "name": "Widget.topBarBasketValuesLabel",
                 "tooltipText": "Widget.topBarBasketValuesTooltip",
-                "listBoxValues": [
-                    {
+                "listBoxValues": [{
                         "value": "sum",
                         "caption": "Widget.topBarBasketValuesSum",
                         "position": 0
@@ -129,8 +128,7 @@
             "options": {
                 "name": "Widget.navigationMegaMenuLevelsLabel",
                 "tooltipText": "Widget.navigationMegaMenuLevelsTooltip",
-                "listBoxValues": [
-                    {
+                "listBoxValues": [{
                         "value": 2,
                         "caption": "Widget.navigationMegaMenuLevels2"
                     },

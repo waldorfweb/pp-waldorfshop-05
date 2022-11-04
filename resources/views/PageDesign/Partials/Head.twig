@@ -74,22 +74,22 @@
     .icons-loading .fa { visibility: hidden !important; }
 </style>
 
-{% set iconCSS = plugin_path("Waldorfshop4") ~ "/css/dia/ceres-icons.css" %}
+{% set iconCSS = plugin_path("Waldorfshop5") ~ "/css/dia/ceres-icons.css" %}
 {# asynchronously load icons.css #}
 <link rel="preload" href="{{ iconCSS }}" as="style" onload="this.onload=null;this.rel='stylesheet';">
 {# fallback for disabled javascript #}
 <noscript><link rel="stylesheet" href="{{ iconCSS }}"></noscript>
 
-{% set defaultCSS = plugin_path("Waldorfshop4") ~ "/css/dia/" ~ assetName ~ ".css?v=" ~ buildHash %}
-{% set defaultSCSS = plugin_path("Waldorfshop4") ~ "/css/dia/" ~ assetName ~ ".scss?v=" ~ buildHash %}
+{% set defaultCSS = plugin_path("Waldorfshop5") ~ "/css/dia/" ~ assetName ~ ".css?v=" ~ buildHash %}
+{% set defaultSCSS = plugin_path("Waldorfshop5") ~ "/css/dia/" ~ assetName ~ ".scss?v=" ~ buildHash %}
 
 <link rel="preload" as="style" href="{{ defaultCSS }}">
 {% if LayoutContainer.show("Ceres::Template.StyleOverwrite") | trim is empty %}
-    <link rel="stylesheet" href="{{ defaultCSS }}"{% if isShopBuilder %} data-sass-root="{{ plugin_path('Waldorfshop4') }}" data-sass-original="{{ defaultSCSS }}"{% endif %}>
+    <link rel="stylesheet" href="{{ defaultCSS }}"{% if isShopBuilder %} data-sass-root="{{ plugin_path('Waldorfshop5') }}" data-sass-original="{{ defaultSCSS }}"{% endif %}>
 {% endif %}
 
 {% if isShopBuilder %}
-    <link rel="stylesheet" href="{{ plugin_path("Waldorfshop4") }}/css/dia/ceres-shopbuilder.css?v={{ buildHash }}">
+    <link rel="stylesheet" href="{{ plugin_path("Waldorfshop5") }}/css/dia/ceres-shopbuilder.css?v={{ buildHash }}">
 {% endif %}
 
 {# add preload polyfill #}

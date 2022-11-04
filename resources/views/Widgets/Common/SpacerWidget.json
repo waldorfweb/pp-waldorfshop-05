@@ -1,11 +1,11 @@
 {
-    "identifier": "Waldorfshop4::SpacerWidget",
+    "identifier": "Waldorfshop5::SpacerWidget",
     "label": "Widget.spacerLabel",
     "previewImageURL": "/images/dia-widgets/spacer.png",
     "type": "static",
     "categories": ["dia"],
     "position": 400,
-    "widgetClass": "Waldorfshop4\\Widgets\\Common\\SpacerWidget",
+    "widgetClass": "Waldorfshop5\\Widgets\\Common\\SpacerWidget",
     "settings": {
         "size": {
             "type": "select",
@@ -13,8 +13,7 @@
             "defaultValue": "small",
             "options": {
                 "name": "Widget.spacerSizeLabel",
-                "listBoxValues": [
-                    {
+                "listBoxValues": [{
                         "value": "small",
                         "caption": "Widget.spacerSmallCaption",
                         "position": 0

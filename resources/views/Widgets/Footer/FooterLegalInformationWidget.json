@@ -1,11 +1,11 @@
 {
-    "identifier": "Waldorfshop4::FooterLegalInformationWidget",
+    "identifier": "Waldorfshop5::FooterLegalInformationWidget",
     "label": "Widget.legalInformationLabel",
     "previewImageURL": "/images/dia-widgets/footer-rechtlich.png",
     "type": "footer",
     "categories": ["dia"],
     "position": 1200,
-    "widgetClass": "Waldorfshop4\\Widgets\\Footer\\FooterLegalInformationWidget",
+    "widgetClass": "Waldorfshop5\\Widgets\\Footer\\FooterLegalInformationWidget",
     "settings": {
         "showCancellationRights": {
             "type": "checkbox",

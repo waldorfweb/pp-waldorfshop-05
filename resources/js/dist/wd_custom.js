@@ -358,8 +358,7 @@ $(window).on("load", function() {
 
 
     //Login Passwort Hinweis
-    $("#login-modal-wrapper .login-pwd-reset").append("<div class='passworthinweis'><div>Noch kein Kundenkonto?</div><a href='/registrieren' class='btn btn-outline-primary'><i aria-hidden='true' class='fa fa-user-plus ml-1'></i>Registrieren Sie sich</div>");
-
+    $("#login-modal-wrapper .modal-content").append("<div class='passworthinweis registerlink'><div>Noch kein Kundenkonto?</div><a href='/register/' class='btn btn-outline-primary'><i aria-hidden='true' class='fa fa-user-plus ml-1'></i>Registrieren Sie sich</div>");
     $("#login .login-pwd-reset form").append("<div class='passworthinweis gastbestellung'>Hier können Sie als Gast bestellen ohne sich registrieren oder anmelden zu müssen. <br /><button href=\"/anmelden\" class=\"btn btn-primary btn-appearance btn-medium\">Weiter mit Gastbestellung. <i class=\"fa fa-user-secret\"></i></button></div>");
 
     //Widget Startseite

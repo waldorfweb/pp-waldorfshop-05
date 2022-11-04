@@ -1,0 +1,30 @@
+{% import "Ceres::Widgets.Helper.TwigBuilder" as Twig %}
+{% import "Ceres::Widgets.Helper.WidgetHelper" as WidgetHelper %}
+
+{% set hasEntries    = false %}
+{% set class = widget.settings.class.mobile %}
+
+{% for entry in listEntries if entry.image is not empty %}
+    {% set hasEntries = true %}
+{% endfor %}
+
+{% if hasEntries %}
+    <div class="dia-{{ class }}-image-list">
+        <ul class="dia-{{ class }}-image-list__ul">
+            {% for entry in listEntries %}
+                {{ WidgetHelper.setUrlVariable('url', entry.url.value, entry.url.type) }}
+                <li class="dia-{{ class }}-image-list__li">
+                    {% if entry.image is not empty %}
+                        {{ Twig.if("url | trim is not empty") }}
+                            <a class="dia-{{ class }}-image-list__link"{% if entry.url.openInNewTab == true %} target="_blank"{% endif %}{% if entry.url.type == 'external' %} rel="noopener"{% endif %} href="{{ Twig.print("url") }}">
+                        {{ Twig.endif }}
+                            <img class="dia-{{ class }}-image-list__image img-cover" src="{{ entry.image }}" alt="{{ entry.text }}">
+                        {{ Twig.if("url | trim is not empty") }}
+                            </a>
+                        {{ Twig.endif }}
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}

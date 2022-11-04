@@ -1,0 +1,53 @@
+{
+    "identifier": "Waldorfshop4::ImageListWidget",
+    "label": "Widget.imageListLabel",
+    "previewImageURL": "/images/dia-widgets/footer-image-list.png",
+    "type": "static",
+    "categories": ["dia"],
+    "position": 900,
+    "widgetClass": "Waldorfshop4\\Widgets\\Common\\ImageListWidget",
+    "settings": {
+        "class": {
+            "type": "text",
+            "required": true,
+            "default": "footer",
+            "options": {
+                "name": "Widget.classLabel"
+            }
+        },
+        "entries": {
+            "type": "vertical",
+            "isList": "[1,]",
+            "options": {
+                "name": "Widget.listEntryLabel"
+            },
+            "children": {
+                "text": {
+                    "type": "text",
+                    "required": false,
+                    "options": {
+                        "name": "Widget.listEntryNameLabel",
+                        "tooltipText": "Widget.listEntryNameTooltip"
+                    }
+                },
+                "image": {
+                    "type": "file",
+                    "required": false,
+                    "defaultValue": "",
+                    "options": {
+                        "name": "Widget.imageCarouselCustomImagePathLabel",
+                        "tooltipText": "Widget.imageCarouselCustomImagePathTooltip"
+                    }
+                },
+                "url": {
+                    "type": "url",
+                    "required": false,
+                    "options": {
+                        "name": "Widget.listEntryUrlLabel",
+                        "tooltipText": "Widget.listEntryUrlTooltip"
+                    }
+                }
+            }
+        }
+    }
+}

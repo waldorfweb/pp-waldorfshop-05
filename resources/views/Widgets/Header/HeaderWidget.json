@@ -1,0 +1,149 @@
+{
+    "identifier": "Waldorfshop4::HeaderWidget",
+    "label": "Widget.Header",
+    "previewImageURL": "/images/dia-widgets/header-navbar.png",
+    "type": "header",
+    "categories": ["dia"],
+    "position": 0,
+    "widgetClass": "Waldorfshop4\\Widgets\\Header\\HeaderWidget",
+    "settings": {
+        "enableLanguageSelect": {
+            "type": "checkbox",
+            "required": true,
+            "defaultValue": true,
+            "options": {
+                "name": "Widget.topBarEnableLanguageSelectLabel"
+            }
+        },
+        "enableShippingCountrySelect": {
+            "type": "checkbox",
+            "required": true,
+            "defaultValue": true,
+            "options": {
+                "name": "Widget.topBarEnableShippingCountrySelectLabel"
+            }
+        },
+        "enableCurrencySelect": {
+            "type": "checkbox",
+            "required": true,
+            "defaultValue": true,
+            "options": {
+                "name": "Widget.topBarEnableCurrencySelectLabel"
+            }
+        },
+        "showItemImages": {
+            "type": "checkbox",
+            "required": true,
+            "defaultValue": false,
+            "options": {
+                "name": "Widget.topBarShowItemImagesLabel"
+            }
+        },
+        "forwardToSingleItem": {
+            "type": "checkbox",
+            "required": false,
+            "defaultValue": false,
+            "isVisible": "searchStyle !== 'hidden'",
+            "options": {
+                "name": "Widget.topBarForwardToSingleItemLabel"
+            }
+        },
+        "enableLogin": {
+            "type": "checkbox",
+            "required": true,
+            "defaultValue": true,
+            "options": {
+                "name": "Widget.topBarEnableLoginLabel"
+            }
+        },
+        "enableRegistration": {
+            "type": "checkbox",
+            "required": true,
+            "defaultValue": true,
+            "options": {
+                "name": "Widget.topBarEnableRegistrationLabel"
+            }
+        },
+        "enableWishList": {
+            "type": "checkbox",
+            "required": true,
+            "defaultValue": true,
+            "options": {
+                "name": "Widget.topBarEnableWishListLabel"
+            }
+        },
+        "enableBasketPreview": {
+            "type": "checkbox",
+            "required": true,
+            "defaultValue": true,
+            "options": {
+                "name": "Widget.topBarEnableBasketPreviewLabel"
+            }
+        },
+        "basketValues": {
+            "type": "select",
+            "required": true,
+            "defaultValue": "sum",
+            "isVisible": "enableBasketPreview",
+            "options": {
+                "name": "Widget.topBarBasketValuesLabel",
+                "tooltipText": "Widget.topBarBasketValuesTooltip",
+                "listBoxValues": [
+                    {
+                        "value": "sum",
+                        "caption": "Widget.topBarBasketValuesSum",
+                        "position": 0
+                    },
+                    {
+                        "value": "quantity",
+                        "caption": "Widget.topBarBasketValuesQuantity",
+                        "position": 0
+                    },
+                    {
+                        "value": "both",
+                        "caption": "Widget.topBarBasketValuesBoth",
+                        "position": 0
+                    }
+                ]
+            }
+        },
+        "companyLogoUrl": {
+            "type": "file",
+            "required": false,
+            "defaultValue": "",
+            "options": {
+                "name": "Widget.navigationCompanyLogoUrlLabel",
+                "tooltipText": "Widget.navigationCompanyLogoUrlTooltip"
+            }
+        },
+
+        "megaMenuCategoryIds": {
+            "type": "text",
+            "required": true,
+            "defaultValue": ""
+        },
+        "megaMenuLevels": {
+            "type": "select",
+            "required": false,
+            "defaultValue": 2,
+            "options": {
+                "name": "Widget.navigationMegaMenuLevelsLabel",
+                "tooltipText": "Widget.navigationMegaMenuLevelsTooltip",
+                "listBoxValues": [
+                    {
+                        "value": 2,
+                        "caption": "Widget.navigationMegaMenuLevels2"
+                    },
+                    {
+                        "value": 3,
+                        "caption": "Widget.navigationMegaMenuLevels3"
+                    },
+                    {
+                        "value": 4,
+                        "caption": "Widget.navigationMegaMenuLevels4"
+                    }
+                ]
+            }
+        }
+    }
+}

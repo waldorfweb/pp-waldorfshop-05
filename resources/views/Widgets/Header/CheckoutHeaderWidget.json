@@ -1,0 +1,20 @@
+{
+    "identifier": "Waldorfshop4::CheckoutHeaderWidget",
+    "label": "Widget.checkoutHeader",
+    "previewImageURL": "/images/dia-widgets/header-checkout-navbar.png",
+    "type": "header",
+    "categories": ["dia"],
+    "position": 0,
+    "widgetClass": "Waldorfshop4\\Widgets\\Header\\CheckoutHeaderWidget",
+    "settings": {
+        "companyLogoUrl": {
+            "type": "file",
+            "required": false,
+            "defaultValue": "",
+            "options": {
+                "name": "Widget.navigationCompanyLogoUrlLabel",
+                "tooltipText": "Widget.navigationCompanyLogoUrlTooltip"
+            }
+        }
+    }
+}

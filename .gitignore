@@ -1,0 +1,9 @@
+.idea/
+*.iml
+node_modules
+home.html
+sftp-config.json
+resources/css/*.css
+resources/css/*.css.map
+/package-lock.json
+.DS_Store

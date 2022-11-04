@@ -1,0 +1,6 @@
+{% if ceresConfig.log.performanceLevel  == 'development' %}
+    <script src="{{ plugin_path('Waldorfshop4') }}/js/dist/dia-vendor.js"></script>
+    <script src="{{ plugin_path('Waldorfshop4') }}/js/dist/dia-app.js"></script>
+{% else %}
+    <script src="{{ plugin_path('Waldorfshop4') }}/js/dist/dia.min.js"></script>
+{% endif %}

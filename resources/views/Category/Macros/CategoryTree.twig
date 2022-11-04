@@ -1,0 +1,76 @@
+{% macro get_children(category, currentScopeUrl, level, megaMenuLevels) %}
+    {% set megaMenuLevels = megaMenuLevels | default(1) %}
+    {% import _self as childlist %}
+    {% if level < megaMenuLevels %}
+        {% for child in category.children %}
+            {% if (child.details | length > 0) %}
+                {% if level == 1 %}
+                    <li class="dia-megamenu__wrap">
+                        <ul class="dia-megamenu__wrap-list">
+                {% endif %}
+                <li class="dia-megamenu__item dia-megamenu__item--level{{ level }}">
+                    {% set newScope = currentScopeUrl ~ "/" ~ child.details[0].nameUrl %}
+                    <a class="dia-megamenu__link dia-megamenu__link--level{{ level }}" @touchstart.stop href="{{ newScope }}{{ urls.trailingSlashSuffix }}">{{ child.details[0].name }}</a>
+                </li>
+                {% if child.children %}
+                    {{ childlist.get_children(child, newScope, level + 1, megaMenuLevels) }}
+                {% endif %}
+                {% if level == 1 %}
+                        </ul>
+                    </li>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endmacro %}
+
+{% macro get_nav_bar(categories, currentScopeUrl, megaMenuLevels, megaMenuCategoryIds) %}
+    {% import _self as navbar %}
+    {% set counter = 0 %}
+    {% set megaMenuLevels = megaMenuLevels | default(1) %}
+
+    {% for category in categories %}
+
+        {% if category.details | length > 0 %}
+
+            {% if urls.includeLanguage %}
+                {% set currentScopeUrl = "/" ~ category.details[0].lang ~  "/" ~ category.details[0].nameUrl %}
+            {% else %}
+                {% set currentScopeUrl = "/" ~ category.details[0].nameUrl %}
+            {% endif %}
+            {% set translatedChildren = 0 %}
+            {% for children in category.children if children.details[0] %}
+                {% set translatedChildren = translatedChildren + 1 %}
+            {% endfor %}
+
+            {% if category.children and translatedChildren > 0 %}
+
+                <li class="dia-navbar__item dia-navbar__item--dd {% if category.id in megaMenuCategoryIds %}dia-navbar__item--megamenu{% endif %}" v-navigation-touch-handler>
+                    <a class="dia-navbar__link" href="{{ currentScopeUrl }}{{ urls.trailingSlashSuffix }}">{{ category.details[0].name }}</a>
+                    {% if category.id in megaMenuCategoryIds %}
+                        <ul class="dia-megamenu">
+                            {{ navbar.get_children(category, currentScopeUrl, 1, megaMenuLevels) }}
+                        </ul>
+                    {% else %}
+                        <ul class="dia-navbar__dd">
+                            {% for child in category.children %}
+                                {% if child.details | length > 0 %}
+                                    <li  class="dia-navbar__dd-item">
+                                        <a class="dia-navbar__dd-link" href="{{ currentScopeUrl }}/{{ child.details[0].nameUrl }}{{ urls.trailingSlashSuffix }}">{{ child.details[0].name }}</a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+
+            {% else %}
+
+                <li class="dia-navbar__item">
+                    <a class="dia-navbar__link" href="{{ currentScopeUrl }}{{ urls.trailingSlashSuffix }}">{{ category.details[0].name }}</a>
+                </li>
+
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endmacro %}

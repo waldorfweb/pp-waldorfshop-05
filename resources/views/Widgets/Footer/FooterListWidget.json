@@ -1,0 +1,43 @@
+{
+    "identifier": "Waldorfshop4::FooterListWidget",
+    "label": "Widget.listLabel",
+    "previewImageURL": "/images/dia-widgets/footer-linklist.png",
+    "type": "static",
+    "categories": ["dia"],
+    "position": 900,
+    "widgetClass": "Waldorfshop4\\Widgets\\Footer\\FooterListWidget",
+    "settings": {
+        "displayInline": {
+            "type": "checkbox",
+            "defaultValue": false,
+            "options": {
+                "name": "Widget.displayInlineLabel"
+            }
+        },
+        "entries": {
+            "type": "vertical",
+            "isList": "[1,]",
+            "options": {
+                "name": "Widget.listEntryLabel"
+            },
+            "children": {
+                "text": {
+                    "type": "text",
+                    "required": false,
+                    "options": {
+                        "name": "Widget.listEntryNameLabel",
+                        "tooltipText": "Widget.listEntryNameTooltip"
+                    }
+                },
+                "url": {
+                    "type": "url",
+                    "required": false,
+                    "options": {
+                        "name": "Widget.listEntryUrlLabel",
+                        "tooltipText": "Widget.listEntryUrlTooltip"
+                    }
+                }
+            }
+        }
+    }
+}

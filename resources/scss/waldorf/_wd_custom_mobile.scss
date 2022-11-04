@@ -1,0 +1,146 @@
+
+@media(max-width:1350px) {
+	.navbar>.container-max>.row {
+    // display: block !important;
+}
+}
+
+
+@media(max-width:992px) {
+.fixed-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.icons-loading .fa {
+    visibility: visible !important;
+}
+.navbar-toggler {
+    position: absolute;
+    top: -11px;
+    right: -6px;
+    bottom: 0;
+    color: #b92a38;
+    font-size: 2.6rem !important;
+}
+
+}
+
+/* iPad in landscape */
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px)
+and (orientation : landscape) {
+	.main-navbar-collapsable .mainmenu>li>a {
+    padding: 0.1rem 0.5rem !important;
+    color: #b92a38;
+    font-size: 11.2px !important;
+}
+.search-permanent .controls .nav-link {
+    padding: 1.2rem 0.4rem;
+}
+}
+
+/* iPad in portrait */
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px)
+and (orientation : portrait) { /* STYLES GO HERE */ 
+	.always-visible-search {
+		    position: relative;
+/*     top: -11px; */
+    padding-left: 0;
+}
+.telefonnummer {display: none;}
+.blog-entrypoint {
+    position: relative;
+    left: 10px;
+    width:80px;
+/*     top:-6px; */
+}
+.search-permanent .controls .nav-link {
+    padding: 1.2rem 0.4rem;
+}
+}
+
+@media(max-width:767px) {
+.top-bar .kundenhotline .telefonnummer{
+	display: none;
+}
+.blog-entrypoint li:first-child .telefonnummer{
+		display:none!important;
+	}
+	.top-bar .blog-entrypoint li:first-child i{
+		padding-left:10px !important;
+		padding-right:0px !important;
+	}
+	.blog-entrypoint {
+    position: absolute;
+    left: 6px;
+    top: 45px;
+}
+.always-visible-search {
+    // padding-left: 64px;
+}
+.footer .widget_hinweis_klein ul{
+	padding-top:20px;
+}
+
+}
+
+
+
+@media(max-width:567px) {
+.alert {
+	width:100%;
+}
+}
+
+@media(max-width:414px) {
+body{
+}
+.navbar-toggler {
+    position: absolute;
+    top: -11px;
+    right: -6px;
+    bottom: 0;
+    color: #b92a38;
+    font-size: 2.6rem !important;
+}
+.navbar-toggler {
+    right: -12px;
+}
+
+#page-header-parent .search-input {
+
+    // max-width: 225px;
+}
+.always-visible-search {
+    // padding-left: 73px;
+    /* float: right; */
+}
+.always-visible-search {
+    // padding-left: 74px;
+    /* float: right; */
+}
+.footer .widget_hinweis_klein ul li{
+	padding-top:20px;
+}
+#vue-app{
+	overflow-x: hidden !important;
+}
+}
+
+@media(max-width:320px) {
+.navbar-brand img {
+    max-width: 240px;
+}
+.top-bar .control-user{
+	margin-left:14px !important;
+}
+#page-header-parent .search-input {
+    // max-width: 185px;
+}
+}

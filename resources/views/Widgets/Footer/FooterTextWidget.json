@@ -1,0 +1,17 @@
+{
+    "identifier": "Waldorfshop4::FooterTextWidget",
+    "label": "Widget.textLabel",
+    "previewImageURL": "/images/dia-widgets/footer-text.png",
+    "type": "static",
+    "categories": ["dia"],
+    "position": 800,
+    "widgetClass": "Waldorfshop4\\Widgets\\Footer\\FooterTextWidget",
+    "settings": {
+        "text": {
+            "type": "codeEditor",
+            "options": {
+                "name": "Widget.textCodeEditorLabel"
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{% set text         = widget.settings.text.mobile %}
+
+{% import "Ceres::Widgets.Helper.WidgetHelper" as WidgetHelper %}
+
+{% set hasSpacing = widget.settings.customMargin.mobile or widget.settings.customPadding.mobile %}
+{% set inlineSpacings = WidgetHelper.getInlineSpacings(widget.settings, widget.settings.customPadding.mobile, widget.settings.customMargin.mobile) %}
+{% set spacingClasses = WidgetHelper.getSpacingClasses(widget.settings, widget.settings.customPadding.mobile, widget.settings.customMargin.mobile) %}
+
+{% if text | trim is not empty %}
+<div class="dia-text">
+    {{ text | raw }}
+</div>
+{% endif %}

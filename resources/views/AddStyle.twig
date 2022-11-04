@@ -1,0 +1,5 @@
+{% if ceresConfig.log.performanceLevel  == 'development' %}
+    <link rel="stylesheet" href="{{ plugin_path('Waldorfshop4') }}/css/dia.css">
+{% else %}
+    <link rel="stylesheet" href="{{ plugin_path('Waldorfshop4') }}/css/dia.min.css">
+{% endif %}

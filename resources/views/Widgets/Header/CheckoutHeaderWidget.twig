@@ -1,0 +1,17 @@
+{% import "Ceres::Widgets.Helper.TwigBuilder" as Twig %}
+{% set companyLogoUrl               = widget.settings.companyLogoUrl.mobile %}
+
+<div class="dia-checkout-shop-nav header-fw unfixed">
+    <div class="container-max">
+        <div class="d-flex dia-checkout-shop-nav__wrap">
+            <a class="dia-checkout-shop-nav__logo-link" href="{{ Twig.print('urls.home') }}">
+                <img alt="{{ Twig.print('trans("Ceres::Template.headerCompanyName")') }}" src="{{ companyLogoUrl }}"
+                        class="dia-checkout-shop-nav__logo"/>
+            </a>
+            <a class="dia-checkout-shop-nav__back-link" href="{{ Twig.print('urls.home') }}">
+                <i class="fa fa-arrow-left fa-lg"></i>
+                Weiter einkaufen
+            </a>
+        </div>
+    </div>
+</div>

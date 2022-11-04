@@ -1,0 +1,82 @@
+{
+    "identifier": "Waldorfshop4::FooterLegalInformationWidget",
+    "label": "Widget.legalInformationLabel",
+    "previewImageURL": "/images/dia-widgets/footer-rechtlich.png",
+    "type": "footer",
+    "categories": ["dia"],
+    "position": 1200,
+    "widgetClass": "Waldorfshop4\\Widgets\\Footer\\FooterLegalInformationWidget",
+    "settings": {
+        "showCancellationRights": {
+            "type": "checkbox",
+            "required": true,
+            "defaultValue": true,
+            "options": {
+                "name": "Widget.legalInformationShowCancellationLabel"
+            }
+        },
+        "showLegalDisclosure": {
+            "type": "checkbox",
+            "required": true,
+            "defaultValue": true,
+            "options": {
+                "name": "Widget.legalInformationShowLegalDisclosureLabel"
+            }
+        },
+        "showPrivacyPolicy": {
+            "type": "checkbox",
+            "required": true,
+            "defaultValue": true,
+            "options": {
+                "name": "Widget.legalInformationShowPrivacyPolicyLabel"
+            }
+        },
+        "showGtc": {
+            "type": "checkbox",
+            "required": true,
+            "defaultValue": true,
+            "options": {
+                "name": "Widget.legalInformationShowGtcLabel"
+            }
+        },
+        "cancellationFormContainer": {
+            "type": "vertical",
+            "options": {
+                "name": "Widget.legalInformationCancellationFormContainerLabel"
+            },
+            "children": {
+                "showCancellationForm": {
+                    "type": "checkbox",
+                    "required": true,
+                    "defaultValue": true,
+                    "options": {
+                        "name": "Widget.legalInformationShowCancellationFormLabel"
+                    }
+                },
+                "useCancellationPdfUpload": {
+                    "type": "checkbox",
+                    "required": true,
+                    "defaultValue": false,
+                    "isVisible": "cancellationFormContainer.showCancellationForm",
+                    "options": {
+                        "name": "Widget.legalInformationCancellationPdfActiveLabel"
+                    }
+                },
+                "cancellationPdfPath": {
+                    "type": "file",
+                    "required": false,
+                    "defaultValue": "",
+                    "isVisible": "cancellationFormContainer.showCancellationForm && cancellationFormContainer.useCancellationPdfUpload",
+                    "options": {
+                        "name": "Widget.legalInformationCancellationPdfUploadLabel",
+                        "tooltipText": "Widget.legalInformationCancellationPdfUploadTooltip",
+                        "allowedExtensions": [
+                            "pdf"
+                        ]
+                    }
+                }
+
+            }
+        }
+    }
+}

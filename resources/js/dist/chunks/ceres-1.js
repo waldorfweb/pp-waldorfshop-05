@@ -246,7 +246,8 @@ var NotificationService = __webpack_require__(/*! ../../services/NotificationSer
   methods: {
     /**
      * add an item to basket-resource
-     */addToBasket: function addToBasket() {
+     */
+    addToBasket: function addToBasket() {
       var _this = this;
       this.$store.dispatch("loadComponent", "add-item-to-basket-overlay");
       this.$store.dispatch("loadComponent", "basket-preview");
@@ -322,7 +323,8 @@ var NotificationService = __webpack_require__(/*! ../../services/NotificationSer
     /**
      * update the property quantity of the current instance
      * @param value
-     */updateQuantity: function updateQuantity(value) {
+     */
+    updateQuantity: function updateQuantity(value) {
       this.quantity = value;
     }
   },

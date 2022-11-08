@@ -40,7 +40,8 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     /**
      * Send the login data
-     */submit: function submit() {
+     */
+    submit: function submit() {
       var _this = this;
       this.isDisabled = true;
       _services_ApiService__WEBPACK_IMPORTED_MODULE_2__["default"].put("/rest/io/customer/mail/" + this.contactId, {

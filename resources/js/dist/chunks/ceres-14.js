@@ -69,7 +69,8 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     /**
      * Open the login modal
-     */showLogin: function showLogin() {
+     */
+    showLogin: function showLogin() {
       _services_ModalService__WEBPACK_IMPORTED_MODULE_5__["default"].findModal(document.getElementById(this.modalElement)).show();
     },
     validateLogin: function validateLogin() {
@@ -82,7 +83,8 @@ __webpack_require__.r(__webpack_exports__);
     },
     /**
      * Send the login data
-     */sendLogin: function sendLogin() {
+     */
+    sendLogin: function sendLogin() {
       var _this3 = this;
       this.isDisabled = true;
       _services_ApiService__WEBPACK_IMPORTED_MODULE_3__["default"].post("/rest/io/customer/login", {

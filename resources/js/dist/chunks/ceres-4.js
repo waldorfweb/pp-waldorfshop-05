@@ -251,7 +251,8 @@ var NotificationService = __webpack_require__(/*! ../../../services/Notification
   methods: {
     /**
      * Delete item from basket
-     */deleteItem: function deleteItem() {
+     */
+    deleteItem: function deleteItem() {
       var _this = this;
       if (!this.waiting && !this.waitingForDelete && !this.isBasketLoading) {
         this.waitingForDelete = true;
@@ -268,7 +269,8 @@ var NotificationService = __webpack_require__(/*! ../../../services/Notification
     /**
      * Update item quantity in basket
      * @param quantity
-     */updateQuantity: function updateQuantity(quantity) {
+     */
+    updateQuantity: function updateQuantity(quantity) {
       var _this2 = this;
       if (this.basketItem.quantity !== quantity) {
         this.waiting = true;

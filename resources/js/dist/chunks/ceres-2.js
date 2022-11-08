@@ -171,7 +171,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /**
      * Update the address input group to show.
      * @param shippingCountry
-     */onSelectedCountryChanged: function onSelectedCountryChanged(shippingCountry) {
+     */
+    onSelectedCountryChanged: function onSelectedCountryChanged(shippingCountry) {
       this.selectedCountry = shippingCountry;
       if (this.countryLocaleList.indexOf(shippingCountry.isoCode2) >= 0) {
         this.localeToShow = shippingCountry.isoCode2;
@@ -200,7 +201,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /**
      * @param {string} field
      * @param {number} value
-     */emitInputEvent: function emitInputEvent(field, value) {
+     */
+    emitInputEvent: function emitInputEvent(field, value) {
       this.$emit("input", {
         field: field,
         value: value
@@ -354,25 +356,29 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   })),
   /**
    * Get the shipping countries
-   */created: function created() {
+   */
+  created: function created() {
     this.updateSelectedCountry();
   },
   methods: {
     /**
      * Method to fire when the country has changed
-     */countryChanged: function countryChanged(value) {
+     */
+    countryChanged: function countryChanged(value) {
       this.$emit("country-changed", this.getCountryById(parseInt(value)));
       this.$emit("state-changed", null);
     },
     /**
      * @param {*} value
-     */stateChanged: function stateChanged(value) {
+     */
+    stateChanged: function stateChanged(value) {
       this.$emit("state-changed", parseInt(value));
     },
     /**
      * @param countryId
      * @returns {*}
-     */getCountryById: function getCountryById(countryId) {
+     */
+    getCountryById: function getCountryById(countryId) {
       return this.countryList.find(function (country) {
         if (country.id === countryId) {
           return country;
@@ -542,7 +548,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   methods: {
     /**
      * Validate the registration form
-     */validateRegistration: function validateRegistration() {
+     */
+    validateRegistration: function validateRegistration() {
       var _this2 = this;
       Object(_helper_executeReCaptcha__WEBPACK_IMPORTED_MODULE_17__["executeReCaptcha"])(this.$refs.registrationForm).then(function (recaptchaToken) {
         _services_ValidationService__WEBPACK_IMPORTED_MODULE_15__["default"].validate(_this2.$refs.registrationForm).done(function () {
@@ -597,7 +604,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     },
     /**
      * Send the registration
-     */sendRegistration: function sendRegistration(recaptchaToken) {
+     */
+    sendRegistration: function sendRegistration(recaptchaToken) {
       var _this3 = this;
       var userObject = this.getUserObject();
       userObject.recaptcha = recaptchaToken;
@@ -630,7 +638,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     },
     /** 
      * Resets recaptcha v2 to make it capable of executing again.
-    */resetRecaptcha: function resetRecaptcha() {
+    */
+    resetRecaptcha: function resetRecaptcha() {
       if (App.config.global.googleRecaptchaVersion === 2 && window.grecaptcha) {
         var recaptchaId = this.$refs.registrationForm.querySelector("[data-recaptcha]");
         window.grecaptcha.reset(recaptchaId);
@@ -645,7 +654,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     /**
      * Handle the user object which is send to the server
      * @returns {{contact: {referrerId: number, typeId: number, options: {typeId: {typeId: number, subTypeId: number, value: *, priority: number}}}, honeypot: string}|{contact: {referrerId: number, typeId: number, password: *, options: {typeId: {typeId: number, subTypeId: number, value: *, priority: number}}}, honeypot: string}}
-     */getUserObject: function getUserObject() {
+     */
+    getUserObject: function getUserObject() {
       var userObject = {
         contact: {
           referrerId: 1,
@@ -788,7 +798,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   /**
    * Get the shipping countries
-   */created: function created() {
+   */
+  created: function created() {
     this.$options.template = this.template;
     var selectedSalutation = this.defaultSalutation;
     if (Object(_helper_utils__WEBPACK_IMPORTED_MODULE_8__["isNullOrUndefined"])(selectedSalutation)) {
@@ -962,7 +973,8 @@ __webpack_require__.r(__webpack_exports__);
     /**
      * @param value
      * @returns {string} - Returns the best matching vat code
-     */getVatPrefix: function getVatPrefix(value) {
+     */
+    getVatPrefix: function getVatPrefix(value) {
       var _this$vatCodes2;
       var result = "";
       (_this$vatCodes2 = this.vatCodes) === null || _this$vatCodes2 === void 0 ? void 0 : _this$vatCodes2.forEach(function (vatCode) {

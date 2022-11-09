@@ -22367,20 +22367,6 @@ button[data-testing=cookie-bar-save] {
   width: 100%;
 }
 
-.main-topbar-neu .always-visible-search .container-max:before {
-  content: " ";
-  display: block;
-  width: 240px;
-  height: 40px;
-  background: url(https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/logo_shop_neu.svg);
-  background-repeat: no-repeat;
-  float: left;
-}
-
-.navbar .brand-wrapper {
-  display: none !important;
-}
-
 .main-navbar-collapsable .mainmenu {
   flex-flow: wrap;
   justify-content: center;

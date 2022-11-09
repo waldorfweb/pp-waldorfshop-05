@@ -4383,10 +4383,16 @@ button[data-testing="cookie-bar-save"] {
     .responsive-iframe-gewinn iframe {
         height: 4400px;
     }
-}@font-face {
+}
+
+@font-face {
     font-display: swap;
 }
+
+
 /* aus https://source.waldorfshop.eu/c5/css/wd_staging.css */
+
+
 /* checkout katalog */
 
 .widget_katalog_checkout .add-to-basket-lg-container {
@@ -4454,9 +4460,9 @@ button[data-testing="cookie-bar-save"] {
 } */
 
 .navbar {
-transition:none !important;
-
+    transition: none !important;
 }
+
 
 /* image not found bug */
 
@@ -4497,6 +4503,7 @@ transition:none !important;
     opacity: .7;
     transition: opacity .2s
 }
+
 #countrySettings {
     position: absolute;
     width: 100%;
@@ -4507,6 +4514,8 @@ transition:none !important;
     border-radius: 0 0 5px 5px;
     border-right: 1px solid #FBF3E6;
 }
+
+
 /* image not found bug */
 
 .lb-cancel {
@@ -4546,6 +4555,7 @@ transition:none !important;
     opacity: .7;
     transition: opacity .2s
 }
+
 #countrySettings {
     position: absolute;
     width: 100%;
@@ -4556,22 +4566,23 @@ transition:none !important;
     border-radius: 0 0 5px 5px;
     border-right: 1px solid #FBF3E6;
 }
+
 #countrySettings {
     width: 100%;
 }
 
-.main-topbar-neu .always-visible-search .container-max:before {
-    content: " ";
-    display: block;
-    width: 240px;
-    height: 40px;
-    background: url(https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/logo_shop_neu.svg);
-    background-repeat: no-repeat;
-    float: left;
-}
-.navbar .brand-wrapper{
-display:none !important;
-}
+// .main-topbar-neu .always-visible-search .container-max:before {
+//     content: " ";
+//     display: block;
+//     width: 240px;
+//     height: 40px;
+//     background: url(https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/logo_shop_neu.svg);
+//     background-repeat: no-repeat;
+//     float: left;
+// }
+// .navbar .brand-wrapper{
+// display:none !important;
+// }
 .main-navbar-collapsable .mainmenu {
     flex-flow: wrap;
     justify-content: center;
@@ -4588,7 +4599,6 @@ display:none !important;
     border-radius: 0 0 5px 5px;
     border-right: 1px solid #FBF3E6;
 }
-
 
 .language-settings .flag-icon {
     font-size: 20px;

@@ -33,7 +33,8 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     /**
      *  Determine appropriate image url to use as background source
-     */backgroundSource: function backgroundSource() {
+     */
+    backgroundSource: function backgroundSource() {
       if (!this.url) {
         return null;
       }

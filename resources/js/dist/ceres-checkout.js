@@ -312,7 +312,8 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     /**
      *  Determine appropriate image url to use as background source
-     */backgroundSource: function backgroundSource() {
+     */
+    backgroundSource: function backgroundSource() {
       if (!this.url) {
         return null;
       }
@@ -518,7 +519,8 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     /**
      *  Determine appropriate image url to use as background source
-     */backgroundSource: function backgroundSource() {
+     */
+    backgroundSource: function backgroundSource() {
       if (this.imageUrl && this.mimeType) {
         return this.supported ? this.imageUrl : this.fallbackUrl;
       } else {
@@ -527,7 +529,8 @@ __webpack_require__.r(__webpack_exports__);
     },
     /**
      * Check if url points to a .webp image and return appropriate mime-type
-     */mimeType: function mimeType() {
+     */
+    mimeType: function mimeType() {
       var _this$imageUrl;
       var matches = (_this$imageUrl = this.imageUrl) === null || _this$imageUrl === void 0 ? void 0 : _this$imageUrl.match(/.?(\.\w+)(?:$|\?)/);
       if (matches) {
@@ -800,7 +803,8 @@ var TabNavItem = {
     /**
      * Checks if tab content contains text or img or iframe element.
      * @param {*} tab
-     */filterContent: function filterContent(tab) {
+     */
+    filterContent: function filterContent(tab) {
       return tab.$el.textContent.trim().length > 0 || tab.$el.querySelector("img, iframe, picture");
     }
   }
@@ -941,7 +945,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /**
      * Update the address input group to show.
      * @param shippingCountry
-     */onSelectedCountryChanged: function onSelectedCountryChanged(shippingCountry) {
+     */
+    onSelectedCountryChanged: function onSelectedCountryChanged(shippingCountry) {
       this.selectedCountry = shippingCountry;
       if (this.countryLocaleList.indexOf(shippingCountry.isoCode2) >= 0) {
         this.localeToShow = shippingCountry.isoCode2;
@@ -970,7 +975,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /**
      * @param {string} field
      * @param {number} value
-     */emitInputEvent: function emitInputEvent(field, value) {
+     */
+    emitInputEvent: function emitInputEvent(field, value) {
       this.$emit("input", {
         field: field,
         value: value
@@ -1124,25 +1130,29 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   })),
   /**
    * Get the shipping countries
-   */created: function created() {
+   */
+  created: function created() {
     this.updateSelectedCountry();
   },
   methods: {
     /**
      * Method to fire when the country has changed
-     */countryChanged: function countryChanged(value) {
+     */
+    countryChanged: function countryChanged(value) {
       this.$emit("country-changed", this.getCountryById(parseInt(value)));
       this.$emit("state-changed", null);
     },
     /**
      * @param {*} value
-     */stateChanged: function stateChanged(value) {
+     */
+    stateChanged: function stateChanged(value) {
       this.$emit("state-changed", parseInt(value));
     },
     /**
      * @param countryId
      * @returns {*}
-     */getCountryById: function getCountryById(countryId) {
+     */
+    getCountryById: function getCountryById(countryId) {
       return this.countryList.find(function (country) {
         if (country.id === countryId) {
           return country;
@@ -1376,7 +1386,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   /**
    * Get the shipping countries
-   */created: function created() {
+   */
+  created: function created() {
     this.$options.template = this.template;
     var selectedSalutation = this.defaultSalutation;
     if (Object(_helper_utils__WEBPACK_IMPORTED_MODULE_8__["isNullOrUndefined"])(selectedSalutation)) {
@@ -1550,7 +1561,8 @@ __webpack_require__.r(__webpack_exports__);
     /**
      * @param value
      * @returns {string} - Returns the best matching vat code
-     */getVatPrefix: function getVatPrefix(value) {
+     */
+    getVatPrefix: function getVatPrefix(value) {
       var _this$vatCodes2;
       var result = "";
       (_this$vatCodes2 = this.vatCodes) === null || _this$vatCodes2 === void 0 ? void 0 : _this$vatCodes2.forEach(function (vatCode) {
@@ -2744,12 +2756,14 @@ __webpack_require__.r(__webpack_exports__);
     /**
      * Dissmiss the notification
      * @param notification
-     */dismiss: function dismiss(notification) {
+     */
+    dismiss: function dismiss(notification) {
       _services_NotificationService__WEBPACK_IMPORTED_MODULE_4__["default"].getNotifications().remove(notification);
     },
     /**
      * show initial notifications from server
-     */showInitialNotifications: function showInitialNotifications() {
+     */
+    showInitialNotifications: function showInitialNotifications() {
       for (var type in this.initialNotifications) {
         var notification = this.initialNotifications[type];
         if (Object(_helper_utils__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(notification)) {
@@ -13905,8 +13919,8 @@ var FunctionPrototype = Function.prototype;
 var call = FunctionPrototype.call;
 var uncurryThisWithBind = NATIVE_BIND && FunctionPrototype.bind.bind(call, call);
 
-module.exports = function (fn) {
-  return NATIVE_BIND ? uncurryThisWithBind(fn) : function () {
+module.exports = NATIVE_BIND ? uncurryThisWithBind : function (fn) {
+  return function () {
     return call.apply(fn, arguments);
   };
 };
@@ -16672,10 +16686,10 @@ var store = __webpack_require__(/*! ../internals/shared-store */ "./node_modules
 (module.exports = function (key, value) {
   return store[key] || (store[key] = value !== undefined ? value : {});
 })('versions', []).push({
-  version: '3.25.5',
+  version: '3.26.0',
   mode: IS_PURE ? 'pure' : 'global',
   copyright: '© 2014-2022 Denis Pushkarev (zloirock.ru)',
-  license: 'https://github.com/zloirock/core-js/blob/v3.25.5/LICENSE',
+  license: 'https://github.com/zloirock/core-js/blob/v3.26.0/LICENSE',
   source: 'https://github.com/zloirock/core-js'
 });
 
@@ -20823,7 +20837,7 @@ handlePrototype(DOMTokenListPrototype, 'DOMTokenList');
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-!function(t,e){ true?module.exports=e():undefined}(this,(function(){"use strict";var t=1e3,e=6e4,n=36e5,r="millisecond",i="second",s="minute",u="hour",a="day",o="week",f="month",h="quarter",c="year",d="date",$="Invalid Date",l=/^(\d{4})[-/]?(\d{1,2})?[-/]?(\d{0,2})[Tt\s]*(\d{1,2})?:?(\d{1,2})?:?(\d{1,2})?[.:]?(\d+)?$/,y=/\[([^\]]+)]|Y{1,4}|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|a|A|m{1,2}|s{1,2}|Z{1,2}|SSS/g,M={name:"en",weekdays:"Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"),months:"January_February_March_April_May_June_July_August_September_October_November_December".split("_")},m=function(t,e,n){var r=String(t);return!r||r.length>=e?t:""+Array(e+1-r.length).join(n)+t},g={s:m,z:function(t){var e=-t.utcOffset(),n=Math.abs(e),r=Math.floor(n/60),i=n%60;return(e<=0?"+":"-")+m(r,2,"0")+":"+m(i,2,"0")},m:function t(e,n){if(e.date()<n.date())return-t(n,e);var r=12*(n.year()-e.year())+(n.month()-e.month()),i=e.clone().add(r,f),s=n-i<0,u=e.clone().add(r+(s?-1:1),f);return+(-(r+(n-i)/(s?i-u:u-i))||0)},a:function(t){return t<0?Math.ceil(t)||0:Math.floor(t)},p:function(t){return{M:f,y:c,w:o,d:a,D:d,h:u,m:s,s:i,ms:r,Q:h}[t]||String(t||"").toLowerCase().replace(/s$/,"")},u:function(t){return void 0===t}},v="en",D={};D[v]=M;var p=function(t){return t instanceof _},S=function t(e,n,r){var i;if(!e)return v;if("string"==typeof e){var s=e.toLowerCase();D[s]&&(i=s),n&&(D[s]=n,i=s);var u=e.split("-");if(!i&&u.length>1)return t(u[0])}else{var a=e.name;D[a]=e,i=a}return!r&&i&&(v=i),i||!r&&v},w=function(t,e){if(p(t))return t.clone();var n="object"==typeof e?e:{};return n.date=t,n.args=arguments,new _(n)},O=g;O.l=S,O.i=p,O.w=function(t,e){return w(t,{locale:e.$L,utc:e.$u,x:e.$x,$offset:e.$offset})};var _=function(){function M(t){this.$L=S(t.locale,null,!0),this.parse(t)}var m=M.prototype;return m.parse=function(t){this.$d=function(t){var e=t.date,n=t.utc;if(null===e)return new Date(NaN);if(O.u(e))return new Date;if(e instanceof Date)return new Date(e);if("string"==typeof e&&!/Z$/i.test(e)){var r=e.match(l);if(r){var i=r[2]-1||0,s=(r[7]||"0").substring(0,3);return n?new Date(Date.UTC(r[1],i,r[3]||1,r[4]||0,r[5]||0,r[6]||0,s)):new Date(r[1],i,r[3]||1,r[4]||0,r[5]||0,r[6]||0,s)}}return new Date(e)}(t),this.$x=t.x||{},this.init()},m.init=function(){var t=this.$d;this.$y=t.getFullYear(),this.$M=t.getMonth(),this.$D=t.getDate(),this.$W=t.getDay(),this.$H=t.getHours(),this.$m=t.getMinutes(),this.$s=t.getSeconds(),this.$ms=t.getMilliseconds()},m.$utils=function(){return O},m.isValid=function(){return!(this.$d.toString()===$)},m.isSame=function(t,e){var n=w(t);return this.startOf(e)<=n&&n<=this.endOf(e)},m.isAfter=function(t,e){return w(t)<this.startOf(e)},m.isBefore=function(t,e){return this.endOf(e)<w(t)},m.$g=function(t,e,n){return O.u(t)?this[e]:this.set(n,t)},m.unix=function(){return Math.floor(this.valueOf()/1e3)},m.valueOf=function(){return this.$d.getTime()},m.startOf=function(t,e){var n=this,r=!!O.u(e)||e,h=O.p(t),$=function(t,e){var i=O.w(n.$u?Date.UTC(n.$y,e,t):new Date(n.$y,e,t),n);return r?i:i.endOf(a)},l=function(t,e){return O.w(n.toDate()[t].apply(n.toDate("s"),(r?[0,0,0,0]:[23,59,59,999]).slice(e)),n)},y=this.$W,M=this.$M,m=this.$D,g="set"+(this.$u?"UTC":"");switch(h){case c:return r?$(1,0):$(31,11);case f:return r?$(1,M):$(0,M+1);case o:var v=this.$locale().weekStart||0,D=(y<v?y+7:y)-v;return $(r?m-D:m+(6-D),M);case a:case d:return l(g+"Hours",0);case u:return l(g+"Minutes",1);case s:return l(g+"Seconds",2);case i:return l(g+"Milliseconds",3);default:return this.clone()}},m.endOf=function(t){return this.startOf(t,!1)},m.$set=function(t,e){var n,o=O.p(t),h="set"+(this.$u?"UTC":""),$=(n={},n[a]=h+"Date",n[d]=h+"Date",n[f]=h+"Month",n[c]=h+"FullYear",n[u]=h+"Hours",n[s]=h+"Minutes",n[i]=h+"Seconds",n[r]=h+"Milliseconds",n)[o],l=o===a?this.$D+(e-this.$W):e;if(o===f||o===c){var y=this.clone().set(d,1);y.$d[$](l),y.init(),this.$d=y.set(d,Math.min(this.$D,y.daysInMonth())).$d}else $&&this.$d[$](l);return this.init(),this},m.set=function(t,e){return this.clone().$set(t,e)},m.get=function(t){return this[O.p(t)]()},m.add=function(r,h){var d,$=this;r=Number(r);var l=O.p(h),y=function(t){var e=w($);return O.w(e.date(e.date()+Math.round(t*r)),$)};if(l===f)return this.set(f,this.$M+r);if(l===c)return this.set(c,this.$y+r);if(l===a)return y(1);if(l===o)return y(7);var M=(d={},d[s]=e,d[u]=n,d[i]=t,d)[l]||1,m=this.$d.getTime()+r*M;return O.w(m,this)},m.subtract=function(t,e){return this.add(-1*t,e)},m.format=function(t){var e=this,n=this.$locale();if(!this.isValid())return n.invalidDate||$;var r=t||"YYYY-MM-DDTHH:mm:ssZ",i=O.z(this),s=this.$H,u=this.$m,a=this.$M,o=n.weekdays,f=n.months,h=function(t,n,i,s){return t&&(t[n]||t(e,r))||i[n].slice(0,s)},c=function(t){return O.s(s%12||12,t,"0")},d=n.meridiem||function(t,e,n){var r=t<12?"AM":"PM";return n?r.toLowerCase():r},l={YY:String(this.$y).slice(-2),YYYY:this.$y,M:a+1,MM:O.s(a+1,2,"0"),MMM:h(n.monthsShort,a,f,3),MMMM:h(f,a),D:this.$D,DD:O.s(this.$D,2,"0"),d:String(this.$W),dd:h(n.weekdaysMin,this.$W,o,2),ddd:h(n.weekdaysShort,this.$W,o,3),dddd:o[this.$W],H:String(s),HH:O.s(s,2,"0"),h:c(1),hh:c(2),a:d(s,u,!0),A:d(s,u,!1),m:String(u),mm:O.s(u,2,"0"),s:String(this.$s),ss:O.s(this.$s,2,"0"),SSS:O.s(this.$ms,3,"0"),Z:i};return r.replace(y,(function(t,e){return e||l[t]||i.replace(":","")}))},m.utcOffset=function(){return 15*-Math.round(this.$d.getTimezoneOffset()/15)},m.diff=function(r,d,$){var l,y=O.p(d),M=w(r),m=(M.utcOffset()-this.utcOffset())*e,g=this-M,v=O.m(this,M);return v=(l={},l[c]=v/12,l[f]=v,l[h]=v/3,l[o]=(g-m)/6048e5,l[a]=(g-m)/864e5,l[u]=g/n,l[s]=g/e,l[i]=g/t,l)[y]||g,$?v:O.a(v)},m.daysInMonth=function(){return this.endOf(f).$D},m.$locale=function(){return D[this.$L]},m.locale=function(t,e){if(!t)return this.$L;var n=this.clone(),r=S(t,e,!0);return r&&(n.$L=r),n},m.clone=function(){return O.w(this.$d,this)},m.toDate=function(){return new Date(this.valueOf())},m.toJSON=function(){return this.isValid()?this.toISOString():null},m.toISOString=function(){return this.$d.toISOString()},m.toString=function(){return this.$d.toUTCString()},M}(),T=_.prototype;return w.prototype=T,[["$ms",r],["$s",i],["$m",s],["$H",u],["$W",a],["$M",f],["$y",c],["$D",d]].forEach((function(t){T[t[1]]=function(e){return this.$g(e,t[0],t[1])}})),w.extend=function(t,e){return t.$i||(t(e,_,w),t.$i=!0),w},w.locale=S,w.isDayjs=p,w.unix=function(t){return w(1e3*t)},w.en=D[v],w.Ls=D,w.p={},w}));
+!function(t,e){ true?module.exports=e():undefined}(this,(function(){"use strict";var t=1e3,e=6e4,n=36e5,r="millisecond",i="second",s="minute",u="hour",a="day",o="week",f="month",h="quarter",c="year",d="date",l="Invalid Date",$=/^(\d{4})[-/]?(\d{1,2})?[-/]?(\d{0,2})[Tt\s]*(\d{1,2})?:?(\d{1,2})?:?(\d{1,2})?[.:]?(\d+)?$/,y=/\[([^\]]+)]|Y{1,4}|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|a|A|m{1,2}|s{1,2}|Z{1,2}|SSS/g,M={name:"en",weekdays:"Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"),months:"January_February_March_April_May_June_July_August_September_October_November_December".split("_"),ordinal:function(t){var e=["th","st","nd","rd"],n=t%100;return"["+t+(e[(n-20)%10]||e[n]||e[0])+"]"}},m=function(t,e,n){var r=String(t);return!r||r.length>=e?t:""+Array(e+1-r.length).join(n)+t},v={s:m,z:function(t){var e=-t.utcOffset(),n=Math.abs(e),r=Math.floor(n/60),i=n%60;return(e<=0?"+":"-")+m(r,2,"0")+":"+m(i,2,"0")},m:function t(e,n){if(e.date()<n.date())return-t(n,e);var r=12*(n.year()-e.year())+(n.month()-e.month()),i=e.clone().add(r,f),s=n-i<0,u=e.clone().add(r+(s?-1:1),f);return+(-(r+(n-i)/(s?i-u:u-i))||0)},a:function(t){return t<0?Math.ceil(t)||0:Math.floor(t)},p:function(t){return{M:f,y:c,w:o,d:a,D:d,h:u,m:s,s:i,ms:r,Q:h}[t]||String(t||"").toLowerCase().replace(/s$/,"")},u:function(t){return void 0===t}},g="en",D={};D[g]=M;var p=function(t){return t instanceof _},S=function t(e,n,r){var i;if(!e)return g;if("string"==typeof e){var s=e.toLowerCase();D[s]&&(i=s),n&&(D[s]=n,i=s);var u=e.split("-");if(!i&&u.length>1)return t(u[0])}else{var a=e.name;D[a]=e,i=a}return!r&&i&&(g=i),i||!r&&g},w=function(t,e){if(p(t))return t.clone();var n="object"==typeof e?e:{};return n.date=t,n.args=arguments,new _(n)},O=v;O.l=S,O.i=p,O.w=function(t,e){return w(t,{locale:e.$L,utc:e.$u,x:e.$x,$offset:e.$offset})};var _=function(){function M(t){this.$L=S(t.locale,null,!0),this.parse(t)}var m=M.prototype;return m.parse=function(t){this.$d=function(t){var e=t.date,n=t.utc;if(null===e)return new Date(NaN);if(O.u(e))return new Date;if(e instanceof Date)return new Date(e);if("string"==typeof e&&!/Z$/i.test(e)){var r=e.match($);if(r){var i=r[2]-1||0,s=(r[7]||"0").substring(0,3);return n?new Date(Date.UTC(r[1],i,r[3]||1,r[4]||0,r[5]||0,r[6]||0,s)):new Date(r[1],i,r[3]||1,r[4]||0,r[5]||0,r[6]||0,s)}}return new Date(e)}(t),this.$x=t.x||{},this.init()},m.init=function(){var t=this.$d;this.$y=t.getFullYear(),this.$M=t.getMonth(),this.$D=t.getDate(),this.$W=t.getDay(),this.$H=t.getHours(),this.$m=t.getMinutes(),this.$s=t.getSeconds(),this.$ms=t.getMilliseconds()},m.$utils=function(){return O},m.isValid=function(){return!(this.$d.toString()===l)},m.isSame=function(t,e){var n=w(t);return this.startOf(e)<=n&&n<=this.endOf(e)},m.isAfter=function(t,e){return w(t)<this.startOf(e)},m.isBefore=function(t,e){return this.endOf(e)<w(t)},m.$g=function(t,e,n){return O.u(t)?this[e]:this.set(n,t)},m.unix=function(){return Math.floor(this.valueOf()/1e3)},m.valueOf=function(){return this.$d.getTime()},m.startOf=function(t,e){var n=this,r=!!O.u(e)||e,h=O.p(t),l=function(t,e){var i=O.w(n.$u?Date.UTC(n.$y,e,t):new Date(n.$y,e,t),n);return r?i:i.endOf(a)},$=function(t,e){return O.w(n.toDate()[t].apply(n.toDate("s"),(r?[0,0,0,0]:[23,59,59,999]).slice(e)),n)},y=this.$W,M=this.$M,m=this.$D,v="set"+(this.$u?"UTC":"");switch(h){case c:return r?l(1,0):l(31,11);case f:return r?l(1,M):l(0,M+1);case o:var g=this.$locale().weekStart||0,D=(y<g?y+7:y)-g;return l(r?m-D:m+(6-D),M);case a:case d:return $(v+"Hours",0);case u:return $(v+"Minutes",1);case s:return $(v+"Seconds",2);case i:return $(v+"Milliseconds",3);default:return this.clone()}},m.endOf=function(t){return this.startOf(t,!1)},m.$set=function(t,e){var n,o=O.p(t),h="set"+(this.$u?"UTC":""),l=(n={},n[a]=h+"Date",n[d]=h+"Date",n[f]=h+"Month",n[c]=h+"FullYear",n[u]=h+"Hours",n[s]=h+"Minutes",n[i]=h+"Seconds",n[r]=h+"Milliseconds",n)[o],$=o===a?this.$D+(e-this.$W):e;if(o===f||o===c){var y=this.clone().set(d,1);y.$d[l]($),y.init(),this.$d=y.set(d,Math.min(this.$D,y.daysInMonth())).$d}else l&&this.$d[l]($);return this.init(),this},m.set=function(t,e){return this.clone().$set(t,e)},m.get=function(t){return this[O.p(t)]()},m.add=function(r,h){var d,l=this;r=Number(r);var $=O.p(h),y=function(t){var e=w(l);return O.w(e.date(e.date()+Math.round(t*r)),l)};if($===f)return this.set(f,this.$M+r);if($===c)return this.set(c,this.$y+r);if($===a)return y(1);if($===o)return y(7);var M=(d={},d[s]=e,d[u]=n,d[i]=t,d)[$]||1,m=this.$d.getTime()+r*M;return O.w(m,this)},m.subtract=function(t,e){return this.add(-1*t,e)},m.format=function(t){var e=this,n=this.$locale();if(!this.isValid())return n.invalidDate||l;var r=t||"YYYY-MM-DDTHH:mm:ssZ",i=O.z(this),s=this.$H,u=this.$m,a=this.$M,o=n.weekdays,f=n.months,h=function(t,n,i,s){return t&&(t[n]||t(e,r))||i[n].slice(0,s)},c=function(t){return O.s(s%12||12,t,"0")},d=n.meridiem||function(t,e,n){var r=t<12?"AM":"PM";return n?r.toLowerCase():r},$={YY:String(this.$y).slice(-2),YYYY:this.$y,M:a+1,MM:O.s(a+1,2,"0"),MMM:h(n.monthsShort,a,f,3),MMMM:h(f,a),D:this.$D,DD:O.s(this.$D,2,"0"),d:String(this.$W),dd:h(n.weekdaysMin,this.$W,o,2),ddd:h(n.weekdaysShort,this.$W,o,3),dddd:o[this.$W],H:String(s),HH:O.s(s,2,"0"),h:c(1),hh:c(2),a:d(s,u,!0),A:d(s,u,!1),m:String(u),mm:O.s(u,2,"0"),s:String(this.$s),ss:O.s(this.$s,2,"0"),SSS:O.s(this.$ms,3,"0"),Z:i};return r.replace(y,(function(t,e){return e||$[t]||i.replace(":","")}))},m.utcOffset=function(){return 15*-Math.round(this.$d.getTimezoneOffset()/15)},m.diff=function(r,d,l){var $,y=O.p(d),M=w(r),m=(M.utcOffset()-this.utcOffset())*e,v=this-M,g=O.m(this,M);return g=($={},$[c]=g/12,$[f]=g,$[h]=g/3,$[o]=(v-m)/6048e5,$[a]=(v-m)/864e5,$[u]=v/n,$[s]=v/e,$[i]=v/t,$)[y]||v,l?g:O.a(g)},m.daysInMonth=function(){return this.endOf(f).$D},m.$locale=function(){return D[this.$L]},m.locale=function(t,e){if(!t)return this.$L;var n=this.clone(),r=S(t,e,!0);return r&&(n.$L=r),n},m.clone=function(){return O.w(this.$d,this)},m.toDate=function(){return new Date(this.valueOf())},m.toJSON=function(){return this.isValid()?this.toISOString():null},m.toISOString=function(){return this.$d.toISOString()},m.toString=function(){return this.$d.toUTCString()},M}(),T=_.prototype;return w.prototype=T,[["$ms",r],["$s",i],["$m",s],["$H",u],["$W",a],["$M",f],["$y",c],["$D",d]].forEach((function(t){T[t[1]]=function(e){return this.$g(e,t[0],t[1])}})),w.extend=function(t,e){return t.$i||(t(e,_,w),t.$i=!0),w},w.locale=S,w.isDayjs=p,w.unix=function(t){return w(1e3*t)},w.en=D[g],w.Ls=D,w.p={},w}));
 
 /***/ }),
 
@@ -64806,13 +64820,15 @@ var NotificationService = __webpack_require__(/*! ../../services/NotificationSer
   }),
   /**
    * Initialise the event listener
-   */created: function created() {
+   */
+  created: function created() {
     this.$store.commit("setPaymentProviderValidator", this.validate);
   },
   methods: {
     /**
      * Event when changing the payment provider
-     */onPaymentProviderChange: function onPaymentProviderChange(newMethodOfPayment) {
+     */
+    onPaymentProviderChange: function onPaymentProviderChange(newMethodOfPayment) {
       var _this = this;
       this.$store.dispatch("selectMethodOfPayment", newMethodOfPayment.id).then(function (data) {
         document.dispatchEvent(new CustomEvent("afterPaymentMethodChanged", {
@@ -65290,13 +65306,15 @@ var NotificationService = __webpack_require__(/*! ../../services/NotificationSer
   /**
    * Add a shipping provider
    * Initialise the event listener
-   */created: function created() {
+   */
+  created: function created() {
     this.$store.commit("setShippingProfileValidator", this.validate);
   },
   methods: {
     /**
      * Method on shipping profile changed
-     */onShippingProfileChange: function onShippingProfileChange(shippingProfileId) {
+     */
+    onShippingProfileChange: function onShippingProfileChange(shippingProfileId) {
       var _this = this;
       this.$store.dispatch("selectShippingProfile", this.shippingProfileList.find(function (shippingProfile) {
         return shippingProfile.parcelServicePresetId === shippingProfileId;
@@ -66253,12 +66271,14 @@ var ModalService = __webpack_require__(/*! ../../../services/ModalService */ "./
   })),
   /**
    *  Check whether the address list is not empty and select the address with the matching ID
-   */created: function created() {
+   */
+  created: function created() {
     this.addEventListener();
   },
   /**
    * Select the address modal
-   */mounted: function mounted() {
+   */
+  mounted: function mounted() {
     var _this = this;
     this.$nextTick(function () {
       _this.addressModal = ModalService.findModal(_this.$refs.addressModal);
@@ -66268,7 +66288,8 @@ var ModalService = __webpack_require__(/*! ../../../services/ModalService */ "./
   methods: {
     /**
      * Add the event listener
-     */addEventListener: function addEventListener() {
+     */
+    addEventListener: function addEventListener() {
       var _this2 = this;
       ApiService.listen("AfterAccountContactLogout", function () {
         _this2.$store.commit("resetAddress", _this2.addressType);
@@ -66277,12 +66298,14 @@ var ModalService = __webpack_require__(/*! ../../../services/ModalService */ "./
     /**
      * Update the selected address
      * @param index
-     */onAddressChanged: function onAddressChanged(address) {
+     */
+    onAddressChanged: function onAddressChanged(address) {
       this.$emit("address-changed", address);
     },
     /**
      * Show the add modal
-     */showAddModal: function showAddModal(type) {
+     */
+    showAddModal: function showAddModal(type) {
       this.modalType = type || "create";
       if (this.isSalutationEnabled) {
         this.addressToEdit = {
@@ -66306,7 +66329,8 @@ var ModalService = __webpack_require__(/*! ../../../services/ModalService */ "./
     /**
      * Show the edit modal
      * @param address
-     */showEditModal: function showEditModal(address) {
+     */
+    showEditModal: function showEditModal(address) {
       this.modalType = "update";
       this.addressToEdit = this.getAddressToEdit(address);
       if (Object(_helper_utils__WEBPACK_IMPORTED_MODULE_22__["isDefined"])(this.addressToEdit.address1) && (this.addressToEdit.address1 === "PACKSTATION" || this.addressToEdit.address1 === "POSTFILIALE") && this.$store.getters.isParcelOrOfficeAvailable) {
@@ -66339,7 +66363,8 @@ var ModalService = __webpack_require__(/*! ../../../services/ModalService */ "./
     /**
      * Show the delete modal
      * @param address
-     */showDeleteModal: function showDeleteModal(address) {
+     */
+    showDeleteModal: function showDeleteModal(address) {
       this.modalType = "delete";
       this.addressToDelete = address;
       this.updateHeadline();
@@ -66347,7 +66372,8 @@ var ModalService = __webpack_require__(/*! ../../../services/ModalService */ "./
     },
     /**
      * Delete the address selected before
-     */deleteAddress: function deleteAddress() {
+     */
+    deleteAddress: function deleteAddress() {
       var _this3 = this;
       this.deleteModalWaiting = true;
       this.$store.dispatch("deleteAddress", {
@@ -66362,17 +66388,20 @@ var ModalService = __webpack_require__(/*! ../../../services/ModalService */ "./
     },
     /**
      * Close the current create/update address modal
-     */closeAddressModal: function closeAddressModal() {
+     */
+    closeAddressModal: function closeAddressModal() {
       this.addressModal.hide();
     },
     /**
      * Close the current delete address modal
-     */closeDeleteModal: function closeDeleteModal() {
+     */
+    closeDeleteModal: function closeDeleteModal() {
       this.deleteModal.hide();
     },
     /**
      * Dynamically create the header line in the modal
-     */updateHeadline: function updateHeadline() {
+     */
+    updateHeadline: function updateHeadline() {
       var headline;
       if (this.modalType === "initial") {
         headline = _services_TranslationService__WEBPACK_IMPORTED_MODULE_24__["default"].translate("Ceres::Template.addressInvoiceAddressInitial");
@@ -66396,7 +66425,8 @@ var ModalService = __webpack_require__(/*! ../../../services/ModalService */ "./
     /**
      * @param countryId
      * @returns string
-     */getCountryName: function getCountryName(countryId) {
+     */
+    getCountryName: function getCountryName(countryId) {
       return this.$store.getters.getCountryName(countryId);
     },
     setAddressToEditField: function setAddressToEditField(_ref) {
@@ -66570,7 +66600,8 @@ var NotificationService = __webpack_require__(/*! ../../../../services/Notificat
   methods: {
     /**
      * Validate the address fields
-     */validate: function validate() {
+     */
+    validate: function validate() {
       var _this = this;
       if (!this.validateBirthday(this.addressData)) {
         this.emitInputEvent({
@@ -66607,7 +66638,8 @@ var NotificationService = __webpack_require__(/*! ../../../../services/Notificat
     },
     /**
      * Save the new address or update an existing one
-     */saveAddress: function saveAddress() {
+     */
+    saveAddress: function saveAddress() {
       if (this.modalType === "initial" || this.modalType === "create") {
         this.createAddress();
       } else if (this.modalType === "update") {
@@ -66616,7 +66648,8 @@ var NotificationService = __webpack_require__(/*! ../../../../services/Notificat
     },
     /**
      * Update an address
-     */updateAddress: function updateAddress() {
+     */
+    updateAddress: function updateAddress() {
       var _this2 = this;
       this.waiting = true;
       this._syncOptionTypesAddressData();
@@ -66637,7 +66670,8 @@ var NotificationService = __webpack_require__(/*! ../../../../services/Notificat
     },
     /**
      * returs true, if a birthdate is displayable in an input of type date
-     */validateBirthday: function validateBirthday(address) {
+     */
+    validateBirthday: function validateBirthday(address) {
       var birthdayInput = this.$refs.addressForm.querySelector("input[type=date][id*='txtBirthdate']");
       if (address.birthday) {
         // input for birthday is not active
@@ -66658,7 +66692,8 @@ var NotificationService = __webpack_require__(/*! ../../../../services/Notificat
     },
     /**
      * Create a new address
-     */createAddress: function createAddress() {
+     */
+    createAddress: function createAddress() {
       var _this3 = this;
       this.waiting = true;
       this._syncOptionTypesAddressData();
@@ -66852,14 +66887,16 @@ __webpack_require__.r(__webpack_exports__);
   }),
   /**
    * Initialise the event listener
-   */created: function created() {
+   */
+  created: function created() {
     if (this.hasToValidate) {
       this.$store.commit("setInvoiceAddressValidator", this.validate);
     }
   },
   /**
    * If no address is related to the user, a popup will open to add an address
-   */mounted: function mounted() {
+   */
+  mounted: function mounted() {
     var _this = this;
     this.$nextTick(function () {
       if (!App.isShopBuilder && App.isCheckoutView && _this.billingAddressList && _this.billingAddressList.length <= 0) {
@@ -66871,7 +66908,8 @@ __webpack_require__.r(__webpack_exports__);
     /**
      * Update the invoice address
      * @param selectedAddress
-     */addressChanged: function addressChanged(selectedAddress) {
+     */
+    addressChanged: function addressChanged(selectedAddress) {
       var _this2 = this;
       this.$store.dispatch("selectAddress", {
         selectedAddress: selectedAddress,
@@ -66979,7 +67017,8 @@ __webpack_require__.r(__webpack_exports__);
     /**
      * Update the delivery address
      * @param selectedAddress
-     */addressChanged: function addressChanged(selectedAddress) {
+     */
+    addressChanged: function addressChanged(selectedAddress) {
       var _this = this;
       this.$store.dispatch("selectAddress", {
         selectedAddress: selectedAddress,
@@ -67592,7 +67631,8 @@ var ValidationService = __webpack_require__(/*! ../../services/ValidationService
   },
   /**
    * Initialise the account settings modal
-   */mounted: function mounted() {
+   */
+  mounted: function mounted() {
     var _this = this;
     this.$nextTick(function () {
       if (_this.$refs.accountEmailModal) {
@@ -67605,7 +67645,8 @@ var ValidationService = __webpack_require__(/*! ../../services/ValidationService
     /**
      * Check whether the data matches
      * @returns {boolean}
-     */matchEmail: function matchEmail() {
+     */
+    matchEmail: function matchEmail() {
       return this.newMail2.length <= 0 || this.newMail === this.newMail2;
     },
     matchOldEmail: function matchOldEmail() {
@@ -67624,12 +67665,14 @@ var ValidationService = __webpack_require__(/*! ../../services/ValidationService
   methods: {
     /**
      * Open the change mail modal
-     */showChangeAccountEmail: function showChangeAccountEmail() {
+     */
+    showChangeAccountEmail: function showChangeAccountEmail() {
       this.accountEmailModal.show();
     },
     /**
      * Open the change password modal
-     */showChangeAccountPassword: function showChangeAccountPassword() {
+     */
+    showChangeAccountPassword: function showChangeAccountPassword() {
       this.accountPasswordModal.show();
     },
     /**
@@ -67647,7 +67690,8 @@ var ValidationService = __webpack_require__(/*! ../../services/ValidationService
     },
     /**
      * Save the new password
-     */saveAccountPassword: function saveAccountPassword() {
+     */
+    saveAccountPassword: function saveAccountPassword() {
       var _this3 = this;
       if (this.isValidPassword) {
         this.isLoading = true;
@@ -67667,7 +67711,8 @@ var ValidationService = __webpack_require__(/*! ../../services/ValidationService
     },
     /**
      * Save the new email
-     */saveAccountEmail: function saveAccountEmail() {
+     */
+    saveAccountEmail: function saveAccountEmail() {
       var _this4 = this;
       if (this.isValidEmail) {
         this.isLoading = true;
@@ -67690,7 +67735,8 @@ var ValidationService = __webpack_require__(/*! ../../services/ValidationService
     },
     /**
      * Clear the password fields in the modal
-     */clearFields: function clearFields() {
+     */
+    clearFields: function clearFields() {
       this.oldPassword = "";
       this.newPassword = "";
       this.confirmPassword = "";
@@ -67699,7 +67745,8 @@ var ValidationService = __webpack_require__(/*! ../../services/ValidationService
     },
     /**
      * Clear the fields and close the modal
-     */clearFieldsAndClose: function clearFieldsAndClose() {
+     */
+    clearFieldsAndClose: function clearFieldsAndClose() {
       if (this.accountEmailModal) {
         this.accountEmailModal.hide();
       }
@@ -67764,7 +67811,8 @@ var ModalService = __webpack_require__(/*! ../../services/ModalService */ "./res
   },
   /**
    * Select the modals
-   */mounted: function mounted() {
+   */
+  mounted: function mounted() {
     var _this = this;
     this.$nextTick(function () {
       _this.bankInfoModal = ModalService.findModal(_this.$refs.bankInfoModal);
@@ -67774,12 +67822,14 @@ var ModalService = __webpack_require__(/*! ../../services/ModalService */ "./res
   methods: {
     /**
      * Set the selected bank-data
-     */changeSelecting: function changeSelecting(bankData) {
+     */
+    changeSelecting: function changeSelecting(bankData) {
       this.selectedBankData = bankData;
     },
     /**
      * Open the modal to add new bank-data
-     */openAddBank: function openAddBank() {
+     */
+    openAddBank: function openAddBank() {
       this.headline = _services_TranslationService__WEBPACK_IMPORTED_MODULE_3__["default"].translate("Ceres::Template.myAccountBankAddDataTitle");
       this.openModal(false);
     },
@@ -67787,7 +67837,8 @@ var ModalService = __webpack_require__(/*! ../../services/ModalService */ "./res
      * Set data to update and open the modal
      * @param index
      * @param bankdata
-     */openUpdateBank: function openUpdateBank(index, bankData) {
+     */
+    openUpdateBank: function openUpdateBank(index, bankData) {
       this.headline = _services_TranslationService__WEBPACK_IMPORTED_MODULE_3__["default"].translate("Ceres::Template.myAccountBankUpdateDataTitle");
       this.setUpdateData(index, bankData);
       this.openModal(true);
@@ -67796,7 +67847,8 @@ var ModalService = __webpack_require__(/*! ../../services/ModalService */ "./res
      * Set data to remove and open the modal
      * @param index
      * @param bankdata
-     */openDeleteBank: function openDeleteBank(index, bankData) {
+     */
+    openDeleteBank: function openDeleteBank(index, bankData) {
       this.setUpdateData(index, bankData);
       this.doUpdate = false;
       this.bankDeleteModal.show();
@@ -67804,7 +67856,8 @@ var ModalService = __webpack_require__(/*! ../../services/ModalService */ "./res
     /**
      * Open the modal
      * @param doUpdate
-     */openModal: function openModal(doUpdate) {
+     */
+    openModal: function openModal(doUpdate) {
       if (!doUpdate) {
         this.resetData();
       }
@@ -67816,13 +67869,15 @@ var ModalService = __webpack_require__(/*! ../../services/ModalService */ "./res
      * Set data to change
      * @param index
      * @param bankdata
-     */setUpdateData: function setUpdateData(index, bankData) {
+     */
+    setUpdateData: function setUpdateData(index, bankData) {
       this.updateBankData = JSON.parse(JSON.stringify(bankData));
       this.updateBankIndex = index;
     },
     /**
      * Validate the input-fields-data
-     */validateInput: function validateInput() {
+     */
+    validateInput: function validateInput() {
       var _this2 = this;
       this.waiting = true;
       _services_ValidationService__WEBPACK_IMPORTED_MODULE_2__["default"].validate($("#my-bankForm")).done(function () {
@@ -67838,7 +67893,8 @@ var ModalService = __webpack_require__(/*! ../../services/ModalService */ "./res
     },
     /**
      * Update bank-data
-     */updateBankInfo: function updateBankInfo() {
+     */
+    updateBankInfo: function updateBankInfo() {
       var _this3 = this;
       this.updateBankData.lastUpdateBy = "customer";
       _services_ApiService__WEBPACK_IMPORTED_MODULE_1__["default"].put("/rest/io/customer/bank_data/" + this.updateBankData.id, this.updateBankData).done(function (response) {
@@ -67855,7 +67911,8 @@ var ModalService = __webpack_require__(/*! ../../services/ModalService */ "./res
     },
     /**
      * Add new bank-data
-     */addBankInfo: function addBankInfo() {
+     */
+    addBankInfo: function addBankInfo() {
       var _this4 = this;
       this.updateBankData.lastUpdateBy = "customer";
       this.updateBankData.contactId = this.contactId;
@@ -67873,7 +67930,8 @@ var ModalService = __webpack_require__(/*! ../../services/ModalService */ "./res
     },
     /**
      * Delete bank-data
-     */removeBankInfo: function removeBankInfo() {
+     */
+    removeBankInfo: function removeBankInfo() {
       var _this5 = this;
       _services_ApiService__WEBPACK_IMPORTED_MODULE_1__["default"].del("/rest/io/customer/bank_data/" + this.updateBankData.id).done(function (response) {
         _this5.checkBankDataSelection(false);
@@ -67887,7 +67945,8 @@ var ModalService = __webpack_require__(/*! ../../services/ModalService */ "./res
     },
     /**
      * Check selection on delete and on add bank-data
-     */checkBankDataSelection: function checkBankDataSelection(addData) {
+     */
+    checkBankDataSelection: function checkBankDataSelection(addData) {
       if (addData && !this.doUpdate && this.userBankData.length < 1) {
         this.selectedBankData = this.userBankData[0];
       }
@@ -67901,20 +67960,23 @@ var ModalService = __webpack_require__(/*! ../../services/ModalService */ "./res
     },
     /**
      * Reset the updateBankData and updateBankIndex
-     */resetData: function resetData() {
+     */
+    resetData: function resetData() {
       this.updateBankData = {};
       this.updateBankIndex = 0;
       this.doUpdate = false;
     },
     /**
      * Close the current bank-modal
-     */closeModal: function closeModal() {
+     */
+    closeModal: function closeModal() {
       this.bankInfoModal.hide();
       this.resetData();
     },
     /**
      * Close the current bank-delete-modal
-     */closeDeleteModal: function closeDeleteModal() {
+     */
+    closeDeleteModal: function closeDeleteModal() {
       this.bankDeleteModal.hide();
       this.resetData();
     }
@@ -68000,7 +68062,8 @@ var ApiService = __webpack_require__(/*! ../../services/ApiService */ "./resourc
   },
   /**
    * Initialize the change payment modal
-   */mounted: function mounted() {
+   */
+  mounted: function mounted() {
     var _this = this;
     this.$nextTick(function () {
       _this.changePaymentModal = ModalService.findModal(_this.$refs.changePaymentModal);
@@ -77025,7 +77088,8 @@ var mutations = {
   },
   /**
    * @deprecated use addFacets instead
-   */setFacets: function setFacets(state, facets) {
+   */
+  setFacets: function setFacets(state, facets) {
     state.facets = facets || [];
   },
   setPriceFacet: function setPriceFacet(state, _ref) {

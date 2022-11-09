@@ -80,7 +80,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   })),
   /**
    * Bind to basket and bind the basket items
-   */mounted: function mounted() {
+   */
+  mounted: function mounted() {
     var _this = this;
     if (App.config.basket.addItemToBasketConfirm === "preview") {
       _services_ApiService__WEBPACK_IMPORTED_MODULE_9__["default"].listen("AfterBasketItemAdd", function (data) {

@@ -120,7 +120,8 @@ var NotificationService = __webpack_require__(/*! ../../services/NotificationSer
     },
     /**
      * returns true if any variation has no attributes
-     */hasEmptyOption: function hasEmptyOption() {
+     */
+    hasEmptyOption: function hasEmptyOption() {
       return this.variations.some(function (variation) {
         return !variation.attributes.length;
       });
@@ -131,7 +132,8 @@ var NotificationService = __webpack_require__(/*! ../../services/NotificationSer
     /**
      * returns the variation, based on the selected attributes / unit
      * returns false if there are none or multiple results
-     */currentSelection: function currentSelection() {
+     */
+    currentSelection: function currentSelection() {
       var filteredVariations = this.filterVariations(null, null, true);
       if (filteredVariations.length === 1) {
         return filteredVariations[0];
@@ -141,7 +143,8 @@ var NotificationService = __webpack_require__(/*! ../../services/NotificationSer
     /**
      * returns all units, selectable by current selection
      * prop 'forceContent' with value true will return all units, without filtering
-     */possibleUnits: function possibleUnits() {
+     */
+    possibleUnits: function possibleUnits() {
       // use an object, to make the entries unique
       var possibleUnits = {};
       var variations = this.forceContent ? this.variations : this.filterVariations(null, null, null, true);
@@ -190,7 +193,8 @@ var NotificationService = __webpack_require__(/*! ../../services/NotificationSer
      * select an attribute and check, if the selection is valid; if not, unsetInvalidSelection will be executed
      * @param {number} attributeId
      * @param {[number, string, null]} attributeValueId
-     */selectAttribute: function selectAttribute(attributeId, attributeValueId) {
+     */
+    selectAttribute: function selectAttribute(attributeId, attributeValueId) {
       attributeValueId = parseInt(attributeValueId) || null;
       if (this.selectedAttributes[attributeId] !== attributeValueId) {
         this.$store.commit("".concat(this.itemId, "/variationSelect/selectItemAttribute"), {
@@ -203,7 +207,8 @@ var NotificationService = __webpack_require__(/*! ../../services/NotificationSer
     /**
      * select a unit and check, if the selection is valid; if not, unsetInvalidSelection will be executed
      * @param {[number, string]} unitId
-     */selectUnit: function selectUnit(unitId) {
+     */
+    selectUnit: function selectUnit(unitId) {
       unitId = parseInt(unitId);
       this.$store.commit("".concat(this.itemId, "/variationSelect/selectItemUnit"), unitId);
       this.onSelectionChange(null, null, unitId);
@@ -224,7 +229,8 @@ var NotificationService = __webpack_require__(/*! ../../services/NotificationSer
      * @param {[number, null]} attributeId
      * @param {[number, null]} attributeValueId
      * @param {[number, null]} unitId
-     */unsetInvalidSelection: function unsetInvalidSelection(attributeId, attributeValueId, unitId) {
+     */
+    unsetInvalidSelection: function unsetInvalidSelection(attributeId, attributeValueId, unitId) {
       var qualifiedVariations = this.getQualifiedVariations(attributeId, attributeValueId, unitId);
       var closestVariations = this.getClosestVariations(qualifiedVariations);
 
@@ -251,7 +257,8 @@ var NotificationService = __webpack_require__(/*! ../../services/NotificationSer
      * returns a string for box tooltips, for not available options
      * @param {number} attributeId
      * @param {number} attributeValueId
-     */getInvalidOptionTooltip: function getInvalidOptionTooltip(attributeId, attributeValueId) {
+     */
+    getInvalidOptionTooltip: function getInvalidOptionTooltip(attributeId, attributeValueId) {
       var qualifiedVariations = this.getQualifiedVariations(attributeId, attributeValueId);
       var closestVariations = this.getClosestVariations(qualifiedVariations);
       if (!closestVariations || closestVariations.length <= 0) {
@@ -293,7 +300,8 @@ var NotificationService = __webpack_require__(/*! ../../services/NotificationSer
      * @param {[number, null]} attributeId
      * @param {[number, null]} attributeValueId
      * @param {[number, null]} unitId
-     */getQualifiedVariations: function getQualifiedVariations(attributeId, attributeValueId, unitId) {
+     */
+    getQualifiedVariations: function getQualifiedVariations(attributeId, attributeValueId, unitId) {
       if (Object(_helper_utils__WEBPACK_IMPORTED_MODULE_23__["isDefined"])(attributeValueId)) {
         return this.variations.filter(function (variation) {
           return Object(_helper_utils__WEBPACK_IMPORTED_MODULE_23__["isDefined"])(variation.attributes.find(function (attribute) {
@@ -312,7 +320,8 @@ var NotificationService = __webpack_require__(/*! ../../services/NotificationSer
     /**
      * return a salable and a non-salable variation with the minimum number of changes on attributes compared to the current selection.
      * @param {array} qualifiedVariations
-     */getClosestVariations: function getClosestVariations(qualifiedVariations) {
+     */
+    getClosestVariations: function getClosestVariations(qualifiedVariations) {
       var closestSalableVariation, numberOfSalableChanges;
       var closestNonSalableVariation, numberOfNonSalableChanges;
       var _iterator3 = _createForOfIteratorHelper(qualifiedVariations),
@@ -358,7 +367,8 @@ var NotificationService = __webpack_require__(/*! ../../services/NotificationSer
     /**
      * returns object with array 'attributesToReset' and newUnit. The attributesToReset contains all attributes, which are not matching with the given variation
      * @param {object} variation
-     */getInvalidSelectionByVariation: function getInvalidSelectionByVariation(variation) {
+     */
+    getInvalidSelectionByVariation: function getInvalidSelectionByVariation(variation) {
       var _this = this;
       var attributesToReset = [];
       var newUnit = null;
@@ -391,7 +401,8 @@ var NotificationService = __webpack_require__(/*! ../../services/NotificationSer
     /**
      * resets all invalid attributes and change the unit, if required. Prints a message to the user if so.
      * @param {object} invalidSelection
-     */correctSelection: function correctSelection(invalidSelection) {
+     */
+    correctSelection: function correctSelection(invalidSelection) {
       var messages = [];
       var attributes = JSON.parse(JSON.stringify(this.selectedAttributes));
       var _iterator5 = _createForOfIteratorHelper(invalidSelection.attributesToReset),
@@ -427,7 +438,8 @@ var NotificationService = __webpack_require__(/*! ../../services/NotificationSer
      * @param {object} attributes
      * @param {number} unitId
      * @param {boolean} strict
-     */filterVariations: function filterVariations(attributes, unitId, strict, ignoreUnit) {
+     */
+    filterVariations: function filterVariations(attributes, unitId, strict, ignoreUnit) {
       var _this2 = this;
       attributes = attributes || this.selectedAttributes;
       unitId = unitId || this.selectedUnit;
@@ -476,7 +488,8 @@ var NotificationService = __webpack_require__(/*! ../../services/NotificationSer
      * @param {number} attributeId
      * @param {[number, string, null]} attributeValueId
      * @param {boolean} filterSalableVariations
-     */isAttributeSelectionValid: function isAttributeSelectionValid(attributeId, attributeValueId, filterSalableVariations) {
+     */
+    isAttributeSelectionValid: function isAttributeSelectionValid(attributeId, attributeValueId, filterSalableVariations) {
       attributeValueId = parseInt(attributeValueId) || null;
       if (this.selectedAttributes[attributeId] === attributeValueId) {
         return true;
@@ -495,7 +508,8 @@ var NotificationService = __webpack_require__(/*! ../../services/NotificationSer
     /**
      * returns true, if the selection with a new unitId would be valid
      * @param {[number, string]} unitId
-     */isUnitSelectionValid: function isUnitSelectionValid(unitId) {
+     */
+    isUnitSelectionValid: function isUnitSelectionValid(unitId) {
       unitId = parseInt(unitId);
       if (this.selectedUnit === unitId) {
         return true;
@@ -508,7 +522,8 @@ var NotificationService = __webpack_require__(/*! ../../services/NotificationSer
      * dispatch vuex action 'loadVariation' to archive a variation
      * dispatches a custom event named 'onVariationChanged'
      * @param {[string, number, null]} variationId
-     */setVariation: function setVariation(variationId) {
+     */
+    setVariation: function setVariation(variationId) {
       var _this3 = this;
       if (!Object(_helper_utils__WEBPACK_IMPORTED_MODULE_23__["isDefined"])(variationId) && this.currentSelection) {
         variationId = this.currentSelection.variationId;

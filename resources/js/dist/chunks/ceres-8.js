@@ -205,7 +205,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     /**
      * exluce categories
-     */isBook: function isBook() {
+     */
+    isBook: function isBook() {
       if (this.$store.state.navigation.currentCategory != null) {
         return [].includes(this.$store.state.navigation.currentCategory.id);
       }
@@ -213,12 +214,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     /**
      * returns itemData.item.storeSpecial
-     */storeSpecial: function storeSpecial() {
+     */
+    storeSpecial: function storeSpecial() {
       return this.item.item.storeSpecial;
     },
     /**
      * returns itemData.texts
-     */texts: function texts() {
+     */
+    texts: function texts() {
       return this.item.texts;
     },
     itemPrice: function itemPrice() {

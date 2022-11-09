@@ -1,6 +1,6 @@
 <?php
 namespace Waldorfshop5\Providers;
-use Ceres\Providers\TemplateServiceProvider;
+use Plenty\Modules\Webshop\Template\Providers\TemplateServiceProvider;
 use Plenty\Modules\ContentCache\Contracts\ContentCacheQueryParamsRepositoryContract;
 use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\Templates\Twig;

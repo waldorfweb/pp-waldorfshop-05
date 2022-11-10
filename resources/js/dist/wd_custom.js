@@ -363,9 +363,9 @@ $(window).on("load", function() {
 
     //Widget Startseite
 
-    $('.widget_box_moebel').prepend('<div class="special-tags"><span class="badge badge-offer badge-danger">-20% auf Artikel von Livipur</span></div>');
+    //$('.widget_box_moebel').prepend('<div class="special-tags"><span class="badge badge-offer badge-danger">-20% auf Artikel von Livipur</span></div>');
 
-    $('.page-home .widget_katalog article').wrap('<div class="owl-item"></div>');
+    //$('.page-home .widget_katalog article').wrap('<div class="owl-item"></div>');
 
     //////// is in Viewport Newsletter aktion
     // ps: disable on small devices!
@@ -593,21 +593,21 @@ $(window).on("load", function() {
 
     //Bug Workaround externer Blog - Owl Carousel Neuheiten Bilder werden nicht geladen
 
-    $(".page-home .owl-carousel .carousel-control.right .owl-single-item-control").click(function() {
-        $("html, body").animate({
-            scrollTop: ($(window).scrollTop() + 1)
-        });
-        //alert('>');
-    });
-    $(".page-home .owl-single-item-control.right").click(function() {
-        $("html, body").animate({
-            scrollTop: ($(window).scrollTop() + 1)
-        });
+    // $(".page-home .owl-carousel .carousel-control.right .owl-single-item-control").click(function() {
+    //     $("html, body").animate({
+    //         scrollTop: ($(window).scrollTop() + 1)
+    //     });
+    //     //alert('>');
+    // });
+    // $(".page-home .owl-single-item-control.right").click(function() {
+    //     $("html, body").animate({
+    //         scrollTop: ($(window).scrollTop() + 1)
+    //     });
 
-    });
+    // });
 
     // Blog Button Ideenforum
-    $('.widget_button_ideenforum a').addClass('btn btn-primary');
+    //$('.widget_button_ideenforum a').addClass('btn btn-primary');
 
 });
 //});
@@ -653,11 +653,11 @@ $(function() {
 
 // scroll to anchor fix
 
-$(document).on('click', 'a[href^="#"]', function(event) {
-    event.preventDefault();
+// $(document).on('click', 'a[href^="#"]', function(event) {
+//     event.preventDefault();
 
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top - 240
-            // 100 is the sticky nav height
-    }, 500);
-});
+//     $('html, body').animate({
+//         scrollTop: $($.attr(this, 'href')).offset().top - 240
+//             // 100 is the sticky nav height
+//     }, 500);
+// });

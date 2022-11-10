@@ -652,7 +652,6 @@ $(function() {
 
 
 // scroll to anchor fix
-
 // $(document).on('click', 'a[href^="#"]', function(event) {
 //     event.preventDefault();
 

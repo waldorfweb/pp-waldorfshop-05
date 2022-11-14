@@ -17494,11 +17494,10 @@ h6,
   display: none;
 }
 
-.wd_logo {
-  width: 316px;
-  margin-left: -28px;
-}
-
+/*.wd_logo {
+    width: 316px;
+    margin-left: -28px;
+}*/
 .top-bar {
   background-color: #FBF3E6;
 }
@@ -17545,7 +17544,7 @@ h6,
 }
 
 .controls-list i {
-  font-size: 1.2rem;
+  /* font-size: 1.2rem;*/
   /* margin-top: ; */
 }
 
@@ -17858,7 +17857,7 @@ nav.wd_menu {
 }
 .mainmenu > li > a {
   background-color: transparent !important;
-  background: url(https://trinidub.de/wd/images/background_nav_ground.png);
+  background: url(https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/background_nav_ground.png);
   background-size: 100% 100%;
   color: #b92a38 !important;
   transition: all 0.5s !important;
@@ -17871,7 +17870,7 @@ nav.wd_menu {
 }
 .mainmenu > li:hover > a {
   background-color: transparent !important;
-  background: url(https://trinidub.de/wd/images/background_nav.png);
+  background: url(https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/background_nav.png);
   background-size: 100% 100%;
   color: #fff !important;
   transition: all 0.5s !important;
@@ -17967,7 +17966,7 @@ nav.wd_menu {
 
 .page-home .widget_katalog .cmp-product-thumb--grid:before {
   content: " ";
-  background-image: url(https://trinidub.de/wd/images/background_frame_white_05.png) !important;
+  background-image: url(https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/background_frame_white_05.png) !important;
   background-size: 100% 100%;
   position: absolute;
   pointer-events: none;
@@ -18304,7 +18303,7 @@ nav.wd_menu {
 }
 
 .svgformcontent .inner {
-  background-image: url(https://trinidub.de/wd/images/overlay_02.png);
+  background-image: url(https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/overlay_02.png);
   background-position: center center;
   background-repeat: no-repeat;
   width: 100%;
@@ -18376,7 +18375,7 @@ nav.wd_menu {
 }
 .cmp-product-thumb:before {
   content: " ";
-  background-image: url(https://trinidub.de/wd/images/background_frame_white_02.png);
+  background-image: url(https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/background_frame_white_02.png);
   background-size: 100% 100%;
   position: absolute;
   pointer-events: none;
@@ -18392,7 +18391,7 @@ nav.wd_menu {
 
 .cmp-product-thumb--grid:before {
   content: " ";
-  background-image: url(https://trinidub.de/wd/images/background_frame_white_02.png);
+  background-image: url(https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/background_frame_white_02.png);
   background-size: 100% 100%;
   position: absolute;
   pointer-events: none;
@@ -18409,7 +18408,7 @@ nav.wd_menu {
 @media (max-width: 992px) {
   .cmp-product-thumb:before {
     content: " ";
-    background-image: url(https://trinidub.de/wd/images/background_frame_white_02.png);
+    background-image: url(https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/background_frame_white_02.png);
     background-size: 100% 100%;
     position: absolute;
     pointer-events: none;
@@ -18427,7 +18426,7 @@ nav.wd_menu {
   }
   .cmp-product-thumb--grid:before {
     content: " ";
-    background-image: url(https://trinidub.de/wd/images/background_frame_white_02.png);
+    background-image: url(https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/background_frame_white_02.png);
     background-size: 100% 100%;
     position: absolute;
     pointer-events: none;
@@ -18464,7 +18463,7 @@ nav.wd_menu {
 }
 .widget_topseller .cmp-product-thumb--grid:before {
   content: " ";
-  background-image: url(https://trinidub.de/wd/images/background_frame_white_03.png);
+  background-image: url(https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/background_frame_white_03.png);
   background-size: 100% 100%;
   position: absolute;
   pointer-events: none;
@@ -18480,7 +18479,7 @@ nav.wd_menu {
 
 .widget_topseller .cmp-product-thumb:before {
   content: " ";
-  background-image: url(https://trinidub.de/wd/images/background_frame_white_03.png);
+  background-image: url(https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/background_frame_white_03.png);
   background-size: 100% 100%;
   position: absolute;
   pointer-events: none;
@@ -18496,7 +18495,7 @@ nav.wd_menu {
 
 .page-checkout .cmp-product-thumb--grid:before {
   content: " ";
-  background-image: url(https://trinidub.de/wd/images/background_frame_white.png);
+  background-image: url(https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/background_frame_white.png);
   background-size: 100% 100%;
   position: absolute;
   pointer-events: none;
@@ -18514,8 +18513,8 @@ nav.wd_menu {
 
 @media not all and (min-resolution: 0.001dpcm) and (min-width: 992px) {
   .cmp-product-thumb--grid {
-    -webkit-mask: url(https://trinidub.de/wd/images/background_kat_baby.png);
-            mask: url(https://trinidub.de/wd/images/background_kat_baby.png);
+    -webkit-mask: url(https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/background_kat_baby.png);
+            mask: url(https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/background_kat_baby.png);
     -webkit-mask-size: 100%;
             mask-size: 100%;
     -webkit-mask: inherit !important;
@@ -18767,7 +18766,7 @@ nav.wd_menu {
 .widget_catdesc_img:before,
 .category-description-img:before {
   content: " ";
-  background-image: url("https://trinidub.de/wd/images/background_frame_white_02.png");
+  background-image: url("https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/background_frame_white_02.png");
   background-size: 100% 100%;
   position: absolute;
   pointer-events: none;
@@ -18953,7 +18952,7 @@ body div#vue-app div div#page-body div div div div div div div div div div#MZOut
 }
 
 .svgformfooter .inner {
-  background-image: url(https://trinidub.de/wd/images/overlay_02.png);
+  background-image: url(https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/overlay_02.png);
   background-position: center center;
   background-repeat: no-repeat;
   width: 100%;
@@ -19116,7 +19115,7 @@ body div#vue-app div div#page-body div div div div div div div div div div#MZOut
 .back-to-top {
   border: 0 solid #fff;
   background: transparent;
-  background: url(https://trinidub.de/wd/images/icons/back_to_top.png);
+  background: url(https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/back_to_top.png);
   background-size: 100% 100%;
   /* 	bottom:7rem; */
 }
@@ -19310,7 +19309,7 @@ div[id^=n2goForm] {
   right: 1rem;
   padding: 2px 36px 2px 20px;
   cursor: pointer;
-  background: url(https://trinidub.de/wd/images/icons/edit-regular.svg) #b92a38;
+  /* background: url(https://trinidub.de/wd/images/icons/edit-regular.svg) #b92a38; */
   background-repeat: no-repeat;
   background-position: 94% 7px;
   font-size: 1rem;
@@ -19903,7 +19902,7 @@ div[id^=n2goForm] {
   color: #fff;
   background-color: transparent;
   padding: 15px 24px !important;
-  background-image: url(https://trinidub.de/wd/images/badge_topseller_sale.png);
+  background-image: url(https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/badge_topseller_sale.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border: 0;
@@ -20138,7 +20137,7 @@ table {
 
 /* Katalogseite */
 .widget_katalog_box .cmp-product-thumb--grid:before {
-  background-image: url(https://trinidub.de/wd/images/background_frame_white.png) !important;
+  background-image: url(https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/background_frame_white.png) !important;
   padding: 30px 0;
 }
 
@@ -20235,7 +20234,7 @@ img {
 }
 
 .widget_katalog_checkout .cmp-product-thumb:before {
-  background-image: url(https://trinidub.de/wd/images/background_frame_white.png) !important;
+  background-image: url(https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/background_frame_white.png) !important;
 }
 
 /* List items */
@@ -21199,6 +21198,10 @@ button[data-testing=cookie-bar-save] {
   padding: 4px 8px;
 }
 
+.widget_katalog_checkout .cmp-product-thumb:before {
+  background: none !important;
+}
+
 /* notification banner */
 .not-banner {
   border-radius: 8px;
@@ -21972,7 +21975,7 @@ a {
 }
 
 .widget_katalog .cmp-product-thumb:before {
-  background-image: url(https://trinidub.de/wd/images/background_frame_white_05.png);
+  background-image: url(https://cdn02.plentymarkets.com/rm2ukznxe8l9/frontend/Layout/background_frame_white_05.png);
 }
 
 .widget_katalog .cmp-product-thumb .add-to-basket-lg-container {

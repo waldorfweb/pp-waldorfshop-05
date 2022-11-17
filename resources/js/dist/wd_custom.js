@@ -1,21 +1,3 @@
-/// Set Cookies -->
-function setCookie(key, value, expiry) {
-    var expires = new Date();
-    expires.setTime(expires.getTime() + (expiry * 24 * 60 * 60 * 1000));
-    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
-}
-
-function getCookie(key) {
-    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
-    return keyValue ? keyValue[2] : null;
-}
-
-function eraseCookie(key) {
-    var keyValue = getCookie(key);
-    setCookie(key, keyValue, '-1');
-}
-
-
 //require(['jQuery'], function ($) {
 //$(document).ready(function(){
 $(window).on("load", function() {
@@ -358,7 +340,15 @@ $(window).on("load", function() {
 
 
     //Login Passwort Hinweis
-    $("#login-modal-wrapper .modal-content").append("<div class='passworthinweis registerlink'><div>Noch kein Kundenkonto?</div><a href='/register/' class='btn btn-outline-primary'><i aria-hidden='true' class='fa fa-user-plus ml-1'></i>Registrieren Sie sich</div>");
+    $(":lang(de) #login-modal-wrapper .modal-content").append("<div class='passworthinweis registerlink'><div>Noch kein Kundenkonto?</div><a href='/register/' class='btn btn-outline-primary'><i aria-hidden='true' class='fa fa-user-plus ml-1'></i>Registrieren Sie sich</div>");
+    $(":lang(fr) #login-modal-wrapper .modal-content").append("<div class='passworthinweis registerlink'><div>Pas encore de compte client ?</div><a href='/fr/register/' class='btn btn-outline-primary'><i aria-hidden='true' class='fa fa-user-plus ml-1'></i>Inscrivez-vous</div>");
+    $(":lang(en) #login-modal-wrapper .modal-content").append("<div class='passworthinweis registerlink'><div>No customer account yet?</div><a href='/en/register/' class='btn btn-outline-primary'><i aria-hidden='true' class='fa fa-user-plus ml-1'></i>Register yourself</div>");
+    $(":lang(nl) #login-modal-wrapper .modal-content").append("<div class='passworthinweis registerlink'><div>Nog geen klantaccount?</div><a href='/nl/register/' class='btn btn-outline-primary'><i aria-hidden='true' class='fa fa-user-plus ml-1'></i>Registreer jezelf</div>");
+    $(":lang(it) #login-modal-wrapper .modal-content").append("<div class='passworthinweis registerlink'><div>Non hai ancora un account cliente?</div><a href='/it/register/' class='btn btn-outline-primary'><i aria-hidden='true' class='fa fa-user-plus ml-1'></i>Registrati</div>");
+    $(":lang(es) #login-modal-wrapper .modal-content").append("<div class='passworthinweis registerlink'><div>¿Aún no tienes cuenta de cliente?</div><a href='/es/register/' class='btn btn-outline-primary'><i aria-hidden='true' class='fa fa-user-plus ml-1'></i>Regístrese usted mismo</div>");
+
+
+
     $("#login .login-pwd-reset form").append("<div class='passworthinweis gastbestellung'>Hier können Sie als Gast bestellen ohne sich registrieren oder anmelden zu müssen. <br /><button href=\"/anmelden\" class=\"btn btn-primary btn-appearance btn-medium\">Weiter mit Gastbestellung. <i class=\"fa fa-user-secret\"></i></button></div>");
 
     //Widget Startseite

@@ -27,11 +27,12 @@ class ThemeServiceProvider extends TemplateServiceProvider
         $this->overrideTemplate('Ceres::PageDesign.Partials.Footer', 'Waldorfshop5::PageDesign.Partials.Footer');
         $this->overrideTemplate('Ceres::PageDesign.Partials.Head', 'Waldorfshop5::PageDesign.Partials.Head');
         $this->overrideTemplate('Ceres::Widgets.Header.TopBarWidget', 'Waldorfshop5::Widgets.Header.TopBarWidget');
+        
 
-        $dispatcher->listen("IO.Resources.Import", function(ResourceContainer $container)
-        {
-            $container->addScriptTemplate('Waldorfshop5::ItemList.Components.CategoryItem');
-        },0);
+        // $dispatcher->listen("IO.Resources.Import", function(ResourceContainer $container)
+        // {
+        //     $container->addScriptTemplate('Waldorfshop5::ItemList.Components.CategoryItem');
+        // },0);
 
         $dispatcher->listen('IO.Component.Import', function (ComponentContainer $container)
         {
